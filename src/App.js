@@ -1,24 +1,42 @@
 import React from 'react';
-import logo from './logo.svg';
+import { Route, Switch } from 'react-router-dom'
 import './App.css';
+import Header from './components/Header/Header'
+import HomePage from './routes/HomePage/HomePage'
+import LoginPage from './routes/LoginPage/LoginPage'
+import SignupPage from './routes/SignupPage/SignupPage'
+import EntryPage from './routes/EntryPage/EntryPage'
+import NotFoundPage from './routes/NotFoundPage/NotFoundPage'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+    <div className='App'>
+      <header className='App__header'>
+        <Header />
       </header>
+      <main className='App__main'>
+        <Switch>
+          <Route
+            path='/'
+            component={HomePage}
+          />
+          <Route
+            path='/login'
+            component={LoginPage}
+          />
+          <Route
+            path='/signup'
+            component={SignupPage}
+          />
+          <Route
+            path='/entry/:entryId'
+            component={EntryPage}
+          />
+          <Route
+            component={NotFoundPage}
+          />
+        </Switch>
+      </main>
     </div>
   );
 }
