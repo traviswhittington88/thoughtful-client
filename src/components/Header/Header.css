@@ -5,7 +5,7 @@
 
 .Header .Thoughtful__heading a {
     text-decoration: none;
-    /* add hover for mouse pointer */
+    /* add hover for mouse pointer but not necessary with Link component */
 }
 
 .Thoughtful__heading {
