@@ -5,7 +5,7 @@ const EntryApiService = {
     getEntries() {
       return fetch(`${config.API_ENDPOINT}/entries`, {
         headers: {
-            'authorization': `basic ${TokenService.getAuthToken() }`,
+            'authorization': `bearer ${TokenService.getAuthToken() }`,
         },
       })
         .then(res =>
@@ -17,7 +17,7 @@ const EntryApiService = {
     getEntry(entryId) {
       return fetch(`${config.API_ENDPOINT}/entries/${entryId}`, {
         headers: {
-          'authorization': `basic ${TokenService.getAuthToken()}`,
+          'authorization': `bearer ${TokenService.getAuthToken()}`,
         },
       })
         .then(res => 
@@ -30,7 +30,7 @@ const EntryApiService = {
       return fetch(`${config.API_ENDPOINT}/entries`, {
         method: 'POST',
         headers: {
-          'authorization': `basic ${TokenService.getAuthToken()}`,
+          'authorization': `bearer ${TokenService.getAuthToken()}`,
           'content-type': 'application/json',
         },
         body: JSON.stringify({

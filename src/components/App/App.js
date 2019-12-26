@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import { Route, Switch } from 'react-router-dom'
 import './App.css';
-import Header from './components/Header/Header'
-import HomePage from './routes/HomePage/HomePage'
-import LoginPage from './routes/LoginPage/LoginPage'
-import SignupPage from './routes/SignupPage/SignupPage'
-import EntryPage from './routes/EntryPage/EntryPage'
-import NotFoundPage from './routes/NotFoundPage/NotFoundPage'
+import Header from '../Header/Header'
+import HomePage from '../../routes/HomePage/HomePage'
+import LoginPage from '../../routes/LoginPage/LoginPage'
+import SignupPage from '../../routes/SignupPage/SignupPage'
+import EntryPage from '../../routes/EntryPage/EntryPage'
+import NotFoundPage from '../../routes/NotFoundPage/NotFoundPage'
 
 export default class App extends Component {
   state = {
