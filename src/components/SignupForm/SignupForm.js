@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
-import TokenService from '../../services/token-service'
 import AuthApiService from '../../services/auth-api-service'
-import { thisTypeAnnotation } from '@babel/types';
+
 
 export default class SignupForm extends Component {
   static defaultProps = {
@@ -10,47 +9,34 @@ export default class SignupForm extends Component {
 
   state = { error: null }
 
-  handleSubmitBasicAuth = ev => {
+  handleSubmit = ev => {
     ev.preventDefault()
-    const { user_name, password } = ev.target
+    const { full_name, pseudonym, user_name, password } = ev.target
+    const newUser = { full_name, pseudonym, user_name, password }
 
-
-    TokenService.saveAuthToken(
-      TokenService.makeBasicAuthToken(user_name.value,password.value)
-    )
-
-    user_name.value = ''
-    password.value = ''
-    this.props.onLoginSuccess()
-  }
-
-
-  handleSubmitJwtAuth = ev => {
-    ev.preventDefault()
     this.setState({ error: null })
-    const { user_name, password } = ev.target
 
-    AuthApiService.postLogin({
-      user_name: user_name.value,
-      password: password.value,
-    })
-      .then(res => {
+    AuthApiService.postUser(newUser)
+      .then(user => {
+        full_name.value = ''
+        pseudonym.value = ''
         user_name.value = ''
         password.value = ''
-        TokenService.saveAuthToken(res.authToken)
-        this.props.onLoginSuccess()
+        this.props.onSignupSuccess()
       })
       .catch(res => {
         this.setState({ error: res.error })
       })
   }
 
+
+
   render() {
     const { error } = this.state
     return (
       <form
         className='SignupForm'
-        onSubmit={this.handleSubmitJwtAuth}
+        onSubmit={this.handleSubmit}
       >
         <div role='alert'>
           {error && <p className='error'>{error}</p>}
@@ -60,7 +46,7 @@ export default class SignupForm extends Component {
             Name 
           </label>
           <input
-            name='name'
+            name='full_name'
             type='text'
             required
             id='SignupForm__name'
