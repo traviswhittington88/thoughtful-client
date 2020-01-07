@@ -1,0 +1,9 @@
+{
+  "version": 2,
+  "alias": "thoughtful-client",
+  "name": "thoughtful-client",
+  "routes": [
+    { "handle": "filesystem" },
+    { "src": "/.*", "dest": "/index.html" }
+  ]
+}

@@ -1,0 +1,28 @@
+.nav {
+  padding: .75% 0;
+  background-color: grey;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  text-align: center;
+}
+
+.links {
+  text-align: center;
+  float: right;
+}
+
+.title, .Header__logged-in, .Header__not-logged-in {
+  display: inline-block;
+}
+
+.Header__logged-in, .Header__not-logged-in a {
+  padding: 0px 15px;
+}
+
+.title {
+  padding: 0px 35px;
+  text-decoration: none;
+}

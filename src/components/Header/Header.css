@@ -1,18 +1,7 @@
-
-.Header {
-
+header {
+  padding: 10px 15px;
 }
 
-.Header .Thoughtful__heading a {
-    text-decoration: none;
-    /* add hover for mouse pointer but not necessary with Link component */
+.Header__logged-in, .Header__not-logged-in {
+  padding: 5px 10px;
 }
-
-.Thoughtful__heading {
-    
-}
-
-.Thoughtful__subheading {
-
-}
-

@@ -1,11 +1,14 @@
 import React, { Component } from 'react';
 import { Route, Switch } from 'react-router-dom'
 import './App.css';
-import Header from '../Header/Header'
+import Nav from '../Nav/Nav'
+import LandingPage from '../../routes/LandingPage/LandingPage'
 import HomePage from '../../routes/HomePage/HomePage'
 import LoginPage from '../../routes/LoginPage/LoginPage'
 import SignupPage from '../../routes/SignupPage/SignupPage'
-import EntryPage from '../../routes/EntryPage/EntryPage'
+import EntryContentPage from '../../routes/EntryContentPage/EntryContentPage'
+import AddEntryPage from '../../routes/AddEntryPage/AddEntryPage'
+import AddJournalPage from '../../routes/AddJournalPage/AddJournalPage'
 import NotFoundPage from '../../routes/NotFoundPage/NotFoundPage'
 
 export default class App extends Component {
@@ -21,7 +24,6 @@ export default class App extends Component {
     return (
       <div className='App'>
         <header className='App__header'>
-          <Header />
         </header>
         <main className='App__main'>
           {this.state.hasError && <p className='errorText'>Sorry there was an error! Try again!</p>}
@@ -29,19 +31,32 @@ export default class App extends Component {
             <Route
               exact
               path='/'
-              component={HomePage}
+              component={LandingPage}
             />
             <Route
-              path='/login'
-              component={LoginPage}
+              exact
+              path='/homepage'
+              component={HomePage}
             />
             <Route
               path='/signup'
               component={SignupPage}
             />
             <Route
-              path='/entry/:entryId'
-              component={EntryPage}
+              path='/login'
+              component={LoginPage}
+            />
+            <Route
+              path="/entry/:entryId"
+              component={EntryContentPage}
+            />
+            <Route
+              path="/journal/addJournalPage"
+              component={AddJournalPage}
+            />
+            <Route
+              path="/entry/addEntryPage"
+              component={AddEntryPage}
             />
             <Route
               component={NotFoundPage}
