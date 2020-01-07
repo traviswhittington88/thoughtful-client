@@ -1,3 +1,10 @@
-.SignupPage {
-    
+header {
+  padding: 45px 15px;
+}
+
+.signup-page {
+  min-height: 200px;
+  height: 100vh;
+  padding: 30px 15px;
+  background-color: #bbb
 }

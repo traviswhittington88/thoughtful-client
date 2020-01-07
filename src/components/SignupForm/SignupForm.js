@@ -76,9 +76,7 @@ export default class SignupForm extends Component {
             id='pseudonym'
           />
         </div>
-        <button type='submit'>
-          Sign up
-        </button>
+        <button type='submit'>Sign up</button>
       </form>
     )
   }

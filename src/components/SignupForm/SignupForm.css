@@ -1,3 +1,8 @@
+* {
+  box-sizing: border-box;
+} /* might be unecessary if in app.css */
+
+
 .signup-form {
 
 }
