@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 import SignupForm from '../../components/SignupForm/SignupForm';
+import Nav from '../../components/Nav/Nav'
+import Footer from '../../components/Footer/Footer'
 
 
 export default class SignupPage extends Component {
@@ -15,12 +17,20 @@ export default class SignupPage extends Component {
     }
     render() {
       return (
-        <section className='SignupPage'>
-          <h2>Sign up!</h2>
-          <SignupForm
-            onSignupSuccess={this.handleSignupSuccess}
-          />
-        </section>
-        )
+        <>
+          <Nav />
+          <main role="main">
+            <section className='SignupPage'>
+              <header role="banner">
+                <h2>Sign up</h2>
+              </header>
+              <SignupForm
+                onSignupSuccess={this.handleSignupSuccess}
+              />
+            </section>
+          </main>
+          <Footer />
+        </>
+      )
     }
 }

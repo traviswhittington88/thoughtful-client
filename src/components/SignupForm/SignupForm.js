@@ -35,54 +35,45 @@ export default class SignupForm extends Component {
     const { error } = this.state
     return (
       <form
-        className='SignupForm'
+        className='signup-form'
         onSubmit={this.handleSubmit}
       >
         <div role='alert'>
           {error && <p className='error'>{error}</p>}
         </div>
-        <div className='name'>
-          <label htmlFor='SignupForm__name'>
-            Name 
-          </label>
+        <div className='full_name'>
+          <label htmlFor='full_name'>Full name*</label>
           <input
             name='full_name'
             type='text'
             required
-            id='SignupForm__name'
+            id='full_name'
           />
         </div>
         <div className='user_name'>
-          <label htmlFor='SignupForm__user_name'>
-            User name 
-          </label>
+          <label htmlFor='user_name'>User name*</label>
           <input
             name='user_name'
             type='text'
             required
-            id='SignupForm__user_name'
+            id='user_name'
           />
         </div>
         <div className='password'>
-          <label htmlFor='SignupForm__password'>
-            Password
-          </label>
+          <label htmlFor='password'>Password*</label>
           <input
             name='password'
             type='password'
             required
-            id='SignupForm__password'
+            id='password'
           />
         </div>
         <div className='pseudonym'>
-          <label htmlFor='SignupForm__pseudonym'>
-            Pseudonym 
-          </label>
+          <label htmlFor='pseudonym'>Pseudonym</label>
           <input
             name='pseudonym'
             type='text'
-            required
-            id='SignupForm__pseudonym'
+            id='pseudonym'
           />
         </div>
         <button type='submit'>

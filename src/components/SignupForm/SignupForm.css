@@ -1,4 +1,4 @@
-.SignupForm {
+.signup-form {
 
 }
 
@@ -6,7 +6,7 @@
 
 }
 
-.name {
+.full_name {
 
 }
 
@@ -22,18 +22,18 @@
 
 }
 
-#SignupForm__name {
+#full_name {
 
 }
 
-#SignupForm__user_name {
+#user_name {
 
 }
 
-#SingupForm__password {
+#password {
 
 }
 
-#SignupForm_pseudonym {
+#pseudonym {
     
 }
