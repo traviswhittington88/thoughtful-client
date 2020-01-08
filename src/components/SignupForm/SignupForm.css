@@ -1,44 +1,27 @@
-* {
-  box-sizing: border-box;
-} /* might be unecessary if in app.css */
-
-
 .signup-form {
-
+  width: 80%;
+  margin: 0 auto;
 }
 
-.error {
-
+label, input {
+  /* In order to define widths */
+  display: inline-block;
 }
 
-.full_name {
-
+label {
+  width: 30%;
+  /* Positions the label text beside the input */
+  text-align: right;
 }
 
-.user_name {
-
+label + input {
+  width: 30%;
+  margin: 0 30% 0 4%;
 }
 
-.password {
 
-}
-
-.pseudonym {
-
-}
-
-#full_name {
-
-}
-
-#user_name {
-
-}
-
-#password {
-
-}
-
-#pseudonym {
-    
+#submit {
+  width: 30%;
+  height: 25px;
+  margin-left: 4%;
 }

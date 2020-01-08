@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import './SignupForm.css'
 import AuthApiService from '../../services/auth-api-service'
 
 
@@ -42,7 +43,7 @@ export default class SignupForm extends Component {
           {error && <p className='error'>{error}</p>}
         </div>
         <div className='full_name'>
-          <label htmlFor='full_name'>Full name*</label>
+          <label htmlFor='full_name'>*Full name</label>
           <input
             name='full_name'
             type='text'
@@ -51,7 +52,7 @@ export default class SignupForm extends Component {
           />
         </div>
         <div className='user_name'>
-          <label htmlFor='user_name'>User name*</label>
+          <label htmlFor='user_name'>*User name</label>
           <input
             name='user_name'
             type='text'
@@ -60,7 +61,7 @@ export default class SignupForm extends Component {
           />
         </div>
         <div className='password'>
-          <label htmlFor='password'>Password*</label>
+          <label htmlFor='password'>*Password</label>
           <input
             name='password'
             type='password'
@@ -76,7 +77,7 @@ export default class SignupForm extends Component {
             id='pseudonym'
           />
         </div>
-        <button type='submit'>Sign up</button>
+        <button type='submit' id="submit">Sign up</button>
       </form>
     )
   }
