@@ -1,15 +1,33 @@
+header {
+  padding: 25px 5px 5px 5px;
+}
 
-@media screen and (min-width: 400px) {
+.signup-page {
+  height: auto;
+}
+
+@media screen and (min-width: 241px) {
+  header {
+    padding: 25px 5px;
+  }
+  
+  .signup-page {
+    background-color: #bbb;
+    min-height: 200px;
+    padding: 30px 15px;
+    height: 100vh;
+  }
+}
+
+@media screen and (min-width: 500px) {
 
   header {
     padding: 45px 15px;
   }
-  
+
   .signup-page {
     min-height: 200px;
-    height: 100vh;
     padding: 30px 15px;
-    background-color: #bbb
   }
 
 }

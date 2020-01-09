@@ -1,15 +1,29 @@
 .header {
-  padding: 25px 5px;
+  padding: 25px 5px 5px 5px;
 }
 
 .login-page {
-  min-height: 200px;
-  padding: 30px 15px;
-  height: 100vh;
-  background-color: #bbb;
+  height: auto;
 }
 
-@media screen and (min-width: 400px) {
+
+@media screen and (min-width: 241px) {
+
+  .header {
+    padding: 25px 5px;
+  }
+  
+  .login-page {
+    background-color: #bbb;
+    min-height: 200px;
+    padding: 30px 15px;
+    height: 100vh;
+  }
+
+}
+
+
+@media screen and (min-width: 500px) {
 
   .header { 
     padding: 45px 15px;
@@ -18,7 +32,5 @@
   .login-page {
     min-height: 200px;
     padding: 30px 15px;
-    
   }
-
 }
