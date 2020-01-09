@@ -23,8 +23,8 @@ export default class LoginPage extends Component {
         <>
           <Nav />
           <main role="main">
-            <section className='LoginPage'>
-              <header role="banner">
+            <section className='login-page'>
+              <header role="banner" className="header">
                 <h2>Login</h2>
               </header>
               <LoginForm

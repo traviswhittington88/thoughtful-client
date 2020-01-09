@@ -1,10 +1,24 @@
-header { 
-  padding: 45px 15px;
+.header {
+  padding: 25px 5px;
 }
 
-section {
+.login-page {
   min-height: 200px;
-  height: 100vh;
   padding: 30px 15px;
+  height: 100vh;
   background-color: #bbb;
+}
+
+@media screen and (min-width: 400px) {
+
+  .header { 
+    padding: 45px 15px;
+  }
+
+  .login-page {
+    min-height: 200px;
+    padding: 30px 15px;
+    
+  }
+
 }

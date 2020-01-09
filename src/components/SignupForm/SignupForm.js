@@ -43,41 +43,45 @@ export default class SignupForm extends Component {
           {error && <p className='error'>{error}</p>}
         </div>
         <div className='full_name'>
-          <label htmlFor='full_name'>*Full name</label>
+          <label htmlFor='full_name' className="label">*Full name</label>
           <input
             name='full_name'
             type='text'
             required
             id='full_name'
+            className="input"
           />
         </div>
         <div className='user_name'>
-          <label htmlFor='user_name'>*User name</label>
+          <label htmlFor='user_name' className="label">*User name</label>
           <input
             name='user_name'
             type='text'
             required
             id='user_name'
+            className="input"
           />
         </div>
         <div className='password'>
-          <label htmlFor='password'>*Password</label>
+          <label htmlFor='password' className="label">*Password</label>
           <input
             name='password'
             type='password'
             required
             id='password'
+            className="input"
           />
         </div>
         <div className='pseudonym'>
-          <label htmlFor='pseudonym'>Pseudonym</label>
+          <label htmlFor='pseudonym' className="label">Pseudonym</label>
           <input
             name='pseudonym'
             type='text'
             id='pseudonym'
+            className="input"
           />
         </div>
-        <button type='submit' id="submit">Sign up</button>
+        <button type='submit' className="submit">Sign up</button>
       </form>
     )
   }

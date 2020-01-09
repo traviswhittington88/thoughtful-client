@@ -5,7 +5,7 @@ export default class Footer extends Component {
   render() {
     return (
     <>
-      <footer role='content-info' class='footer'>
+      <footer role='contentinfo' className='footer'>
         Footer
       </footer>
     </>

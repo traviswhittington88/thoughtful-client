@@ -1,30 +1,51 @@
 .login-form {
-  width: 80%;
   margin: 0 auto;
+  width: 60%;
 }
 
 label, input {
-  /* in order to define widths */
-  display: inline-block;
-}
-
-label {
-  width: 30%;
-  /*positions the label text beside the input */
-  text-align: right;
-}
-
-label + input {
-  width: 30%;
-  /* Large margin-right (30%) to force the next element to the new line
-     and margin-left to create a gutter (space) between the label and input */
-  margin: 0 30% 0 4%;
+  padding: 5px;
+  width: 100%;
 }
 
 #submit {
-  text-align: center;
-  width: 30%;
-  height: 25px;
-  margin-left: 4%;
+  background-color: white;
+  width: 100%;
+  height: 30px;
+  font-size: 20px;
+  margin-top: 20px;
 }
 
+
+@media screen and (min-width: 400px) {
+
+  .login-form {
+    width: 80%;
+  } 
+
+  label, input {
+    /* in order to define widths */
+    display: inline-block;
+  }
+
+  label {
+    width: 30%; 
+    /*positions the label text beside the input */
+    text-align: right;
+  }
+
+  label + input {
+    width: 30%;
+    /* Large margin-right (30%) to force the next element to the new line
+       and margin-left to create a gutter (space) between the label and input */
+    margin: 0 30% 0 4%;
+  }
+
+  #submit {
+    text-align: center;
+    width: 30%;
+    height: 25px;
+    margin-left: 4%;
+  }
+  
+}
