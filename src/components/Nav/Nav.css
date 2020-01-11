@@ -9,20 +9,40 @@
   text-align: center;
 }
 
-.links {
+.item {
+  font-size: 1.2em;
   text-align: center;
-  float: right;
+  padding: 7px;
 }
 
-.title, .Header__logged-in, .Header__not-logged-in {
+.signup, .login, .logout {
   display: inline-block;
 }
 
-.Header__logged-in, .Header__not-logged-in a {
-  padding: 0px 15px;
+.title {
+  text-decoration: none;
 }
 
-.title {
-  padding: 0px 35px;
-  text-decoration: none;
+.title > h3 {
+  margin: 5px 0px;
+}
+
+@media screen and (min-width: 500px) {
+  .nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 2.5% 0;
+    max-height: 100px;
+  }
+
+  .nav > .item {
+    flex: 1 1;
+  }
+
+  .nav > .name {
+    flex: 2 1 125px;
+  }
+
 }

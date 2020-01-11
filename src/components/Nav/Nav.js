@@ -11,7 +11,7 @@ export default class Nav extends Component {
 
   renderLogoutLink() {
     return (
-      <div className='Header__logged-in'>
+      <div className='item logout'>
         <Link
           onClick={this.handleLogoutClick}
           to='/'>
@@ -23,33 +23,38 @@ export default class Nav extends Component {
 
   renderLoginLink() {
     return (
-      <div className='Header__not-logged-in'>
-        <Link
-          to='/signup'>
-          Sign up
-        </Link>
-        <Link
-          to='/login'>
-          Login
-        </Link>
-      </div>
+      <>
+        <div className='item signup'>
+          <Link
+            to='/signup'>
+            Sign up
+          </Link>
+        </div>
+        <div className='item login'>
+          <Link
+            to='/login'>
+            Login
+          </Link>
+        </div>
+      </>
     )
   }
 
   render() {
       return (
         <nav role="navigation" className="nav">
-          <div className="links">
-          <Link
-            to='/'
-            className="title"
-          >
-            <h3>Thoughtful</h3>
-          </Link>
+          <div className="item name">
+            <Link
+              to='/'
+              className="title"
+            >
+              <h3>Thoughtful</h3>
+            </Link>
+          </div>
           {TokenService.hasAuthToken()
             ? this.renderLogoutLink()
             : this.renderLoginLink()}
-          </div>
+          
         </nav>
       )
   }

@@ -1,0 +1,39 @@
+.journalbar-header {
+  padding-top: 15px;
+}
+
+.journal-heading {
+  font-size: 18px;
+}
+
+.journal {
+  margin: 0 auto;
+  width: 95%;
+  font-size: 12px;
+  background-color: grey;
+}
+
+.journal:nth-child(even) {
+  background-color: lightgrey;
+}
+
+.add-journal-button {
+  width: 50%;
+  height: 30px;
+}
+
+@media screen and (min-width: 320px) {
+
+  .journal-heading {
+    font-size: 20px;
+  }
+  
+  .journal {
+    font-size: 16px;
+  }
+
+  .add-journal-button {
+    font-size: 14px
+  }
+  
+}

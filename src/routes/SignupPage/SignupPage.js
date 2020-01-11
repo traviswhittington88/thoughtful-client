@@ -22,7 +22,7 @@ export default class SignupPage extends Component {
           <Nav />
           <main role="main">
             <section className='signup-page'>
-              <header role="banner">
+              <header role="banner" className="signup-page-header">
                 <h2>Sign up</h2>
               </header>
               <SignupForm

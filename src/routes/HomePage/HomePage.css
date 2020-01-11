@@ -1,0 +1,28 @@
+.homepage-header {
+  padding: 45px 0px 0px 0px;
+}
+
+.homepage-heading {
+  font-size: 20px;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+
+}
+
+.split {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.left {
+  background-color: #eee;
+  width: 35%;
+}
+
+.right {
+  background-color: #ddd;
+  width: 65%;
+}
