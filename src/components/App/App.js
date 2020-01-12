@@ -55,9 +55,7 @@ export default class App extends Component {
             <Route
               exact
               path='/homepage'
-              //component={HomePage}
-              render={(props) => <HomePage {...props} entries={this.state.entries} />}
-              
+              component={HomePage}
             />
             <Route
               path='/signup'
@@ -68,16 +66,16 @@ export default class App extends Component {
               component={LoginPage}
             />
             <Route
-              path="/entry/:entryId"
+              path="/entry/:entryid"
               component={EntryContentPage}
             />
             <Route
-              path="/journal/addJournalPage"
-              component={AddJournalPage}
+              path="/addentry"
+              component={AddEntryPage}
             />
             <Route
-              path="/entry/addEntryPage"
-              component={AddEntryPage}
+              path="/addjournal"
+              component={AddJournalPage}
             />
             <Route
               component={NotFoundPage}
