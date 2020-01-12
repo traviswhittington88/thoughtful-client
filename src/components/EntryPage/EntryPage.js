@@ -9,7 +9,7 @@ export default class EntryPage extends Component {
           <h2 className="entry-main-heading">Entries</h2>
         </header>
         <section className="entry-section">
-            <div class="entry">
+            <div className="entry">
               <header>
                 <h2 className="entry-heading">My Daily Entry #1</h2>
                 <p>from</p>
@@ -17,12 +17,12 @@ export default class EntryPage extends Component {
                 <p>by</p>
                 <h4>Roland Deschaine</h4>
                 <h4>January 1, 2020</h4>
-                <p class="content">What a day. I can't say I was surprised at the chaos which ensued upon our normally pleasant little lives...</p>
+                <p className="content">What a day. I can't say I was surprised at the chaos which ensued upon our normally pleasant little lives...</p>
               </header>
             </div>
           </section>
           <section className="entry-section">
-            <div class="entry">
+            <div className="entry">
               <header className="entry">
                 <h2 className="entry-heading">My Daily Entry #2</h2>
                 <p>I learned a lot about life this year...</p>
@@ -30,7 +30,7 @@ export default class EntryPage extends Component {
             </div>
           </section>
           <section className="entry-section">
-            <div class="entry">
+            <div className="entry">
               <header>
                 <h2 className="entry-heading">My Daily Entry #3</h2>
                 <p>Future goals</p>
@@ -38,7 +38,7 @@ export default class EntryPage extends Component {
             </div>
           </section>
           <section className="entry-section">
-            <div class="entry">
+            <div className="entry">
               <header>
                 <h2 className="entry-heading">My Daily Entry #3</h2>
                 <p>Parenthood has taught me a lot</p>

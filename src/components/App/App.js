@@ -12,6 +12,26 @@ import NotFoundPage from '../../routes/NotFoundPage/NotFoundPage'
 
 export default class App extends Component {
   state = {
+    entries : [
+      { 
+        "id": 1,
+        "title": "entry #1",
+        "content": "What a day. I can't say I was surprised at the chaos which ensued upon our normally pleasant little lives..",
+        "journal_id": 4
+      },
+      {
+        "id": 2,
+        "title": "entry #2",
+        "content": "This is entry number two. Yoo. Hoo.",
+        "journal_id": 2
+      },
+      {
+        "id": 3,
+        "title": "entry #3",
+        "content": "this is entry number three.. Woop. Dee.",
+        "journal_id": 1
+      },
+    ],
     hasError: false
   }
   
@@ -35,7 +55,9 @@ export default class App extends Component {
             <Route
               exact
               path='/homepage'
-              component={HomePage}
+              //component={HomePage}
+              render={(props) => <HomePage {...props} entries={this.state.entries} />}
+              
             />
             <Route
               path='/signup'

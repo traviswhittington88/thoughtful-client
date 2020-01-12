@@ -7,6 +7,10 @@ import EntryPage from '../../components/EntryPage/EntryPage'
 
 
 export default class HomePage extends Component {
+    constructor(props) {
+      super(props)
+     console.log(this.props)
+    }
     render() {
         return (
           <>
@@ -14,7 +18,7 @@ export default class HomePage extends Component {
               <main role="main">
                 <div className="homepage">
                   <header role="banner" className="homepage-header">
-                    <h1 className="homepage-heading">Thoughts</h1>
+                    <h1 className="homepage-heading">Your Thoughts</h1>
                   </header>
                   <div className="container">
                     <div className="split left">
