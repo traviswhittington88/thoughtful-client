@@ -12,7 +12,7 @@ export default class AddEntryPage extends Component {
       <main role="main">
         <section className="add-entry-page">
         <header role="banner" className="add-entry-header">
-          <h1 className="add-entry-heading">New Entry</h1>
+          <h2 className="add-entry-heading">New Entry</h2>
         </header>
           <AddEntryForm />
         </section>

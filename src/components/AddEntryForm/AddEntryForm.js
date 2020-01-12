@@ -17,7 +17,7 @@ export default class AddEntryForm extends Component {
           <label htmlFor="journal-select" className="label journal-select">Select Journal</label>
             <select>No Journals</select>
         </div>
-        <button type="submit" className="add-entry-button">Submit</button>
+          <button type="submit" className="add-entry-button">Submit</button>
       </form>
     )
   }
