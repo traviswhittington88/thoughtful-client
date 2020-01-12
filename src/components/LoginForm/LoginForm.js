@@ -61,6 +61,7 @@ export default class LoginForm extends Component {
             type='text'
             name='username'
             id='username'
+            className="input"
             required
           />
         </div>
@@ -72,6 +73,7 @@ export default class LoginForm extends Component {
             type='password'
             name='password'
             id='password'
+            className="input"
             required
           />
         </div>

@@ -1,0 +1,27 @@
+#add-journal {
+  margin: 0 auto;
+  width: 90%;
+  text-align: center;
+}
+
+#form-section {
+  margin: 0 auto;
+}
+
+.journal-title, #journal-title {
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 500px;
+  text-align: center;
+  padding: 5px;
+}
+
+
+#submit-button {
+  background-color: white;
+  height: 30px;
+  width: 100px;
+  font-size: 20px;
+  margin-top: 10px;
+}
