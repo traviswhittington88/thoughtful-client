@@ -7,36 +7,6 @@
   font-size: 1em;
 }
 
-.entry-heading {
-  font-size: 16px;
-}
-
-.entry-subheading {
-  font-size: 14px;
-}
-
-.entry {
-  font-size: 14px;
-}
-
-.entry-section {
-  padding: 5px;
-  background-color: #bbb;
-}
-
-.entry-section:nth-child(even) {
-  background-color: #ddd
-}
-
-.entry-section > p {
-  margin: 0 auto;
-  max-width: 650px;
-}
-
-.entry-section > p + p {
-  margin-top: 15px;
-}
-
 .add-entry-button {
   margin: 10px 0px;
   width: 50%;
