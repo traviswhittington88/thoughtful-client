@@ -3,7 +3,7 @@ import './HomePage.css'
 import Nav from '../../components/Nav/Nav'
 import Footer from '../../components/Footer/Footer'
 import JournalSidebar from '../../components/JournalSidebar/JournalSidebar'
-import EntryPage from '../../components/EntryPage/EntryPage'
+import EntryList from '../../components/EntryList/EntryList'
 
 
 export default class HomePage extends Component {
@@ -25,7 +25,7 @@ export default class HomePage extends Component {
                       <JournalSidebar />
                     </div>
                     <div className="split right">
-                      <EntryPage />
+                      <EntryList />
                     </div>
                   </div>
                 </div>   

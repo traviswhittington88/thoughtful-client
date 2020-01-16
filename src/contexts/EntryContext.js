@@ -1,6 +1,17 @@
 import React, { Component } from 'react'
 
-export const nullEntry = {
+
+const EntryListContext = React.createContext({
+  entries: [],
+  journals: [],
+  addEntry: () => {},
+  deleteEntry: () => {},
+})
+
+export default EntryListContext
+
+
+/*export const nullEntry = {
   author: {},
   tags: [],
 }
@@ -55,3 +66,5 @@ export class EntryProvider extends Component {
     )
   }
 }
+
+*/
