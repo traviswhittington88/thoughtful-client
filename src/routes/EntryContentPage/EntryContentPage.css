@@ -1,0 +1,3 @@
+.entryContentPage {   /* if this works without style issues on small phones move to global css as a rule */
+  height: 100vh;
+}
