@@ -3,9 +3,11 @@ import React, { Component } from 'react'
 
 const EntryListContext = React.createContext({
   entries: [],
+  dummyEntries: [],
   journals: [],
   addEntry: () => {},
   deleteEntry: () => {},
+  filterEntriesByJournal: () => {},
 })
 
 export default EntryListContext

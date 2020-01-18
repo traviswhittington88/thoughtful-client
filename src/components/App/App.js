@@ -70,6 +70,7 @@ const journals = [
 export default class App extends Component {
   state = {
     entries,
+    dummyEntries: entries,
     journals,
     hasError: false
   }
@@ -88,25 +89,28 @@ export default class App extends Component {
   }
 
   deleteEntry = entryId => {
-    const filteredEntries = this.state.entries.filter(entry => entry.id !== entryId)
-    this.setState({ entries: filteredEntries })
+    const filteredEntries = this.state.dummyEntries.filter(entry => entry.id !== entryId)
+    this.setState({ dummyEntries: filteredEntries })
   }
 
-  filterEntriesByJournal(journalId) {
-    console.log('filterEntriesByJournal called \n journalId:',journalId)
+  filterEntriesByJournal = journalId => {
+    const newEntries = this.state.entries
+    const filteredEntries = newEntries.filter(entry => entry.journal_id === journalId)
+    this.setState({ dummyEntries: filteredEntries })
   }
 
   componentDidMount() {
-    fetch('', {})
+    this.setState({ entries, journals })
   }
 
 
   render() {
     const contextValue = {
-      entries: this.state.entries,
+      dummyEntries: this.state.dummyEntries,
       journals: this.state.journals,
       addEntry: this.addEntry,
       deleteEntry: this.deleteEntry,
+      filterEntriesByJournal: this.filterEntriesByJournal,
     }
     return (
       <div className='App'>

@@ -1,19 +1,17 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import './JournalItem.css'
-import JournalContext from '../../contexts/JournalContext'
+import EntryContext from '../../contexts/EntryContext'
 
-function deleteJournal(journalId, callBack) {
 
-}
 
 function filterEntriesByJournalRequest(journalId, callBack) {
-  console.log('filterEntriesByJournalRequest called','\n','journalId:',journalId)
+  callBack(journalId)
 }
 
 export default function JournalItem(props) {
   return (
-    <JournalContext.Consumer>
+    <EntryContext.Consumer>
       {(value) => {
         return (
           <li
@@ -22,7 +20,7 @@ export default function JournalItem(props) {
             onClick={()=> {
               filterEntriesByJournalRequest(
                 props.id,
-                value.filterEntriesByJournal,
+                value.filterEntriesByJournal
               )
             }}
           >
@@ -30,7 +28,7 @@ export default function JournalItem(props) {
           </li>
         )
       }}
-    </JournalContext.Consumer>
+    </EntryContext.Consumer>
   )
 
 }

@@ -9,7 +9,7 @@ export default class EntryList extends Component {
   static contextType = EntryContext
 
   render() {
-    const  { entries } = this.context
+    const  { dummyEntries } = this.context
     return (
       <>
         <section className="EntryList">
@@ -17,7 +17,7 @@ export default class EntryList extends Component {
             <h2 className="entry-main-heading">Your Entries</h2>
           </header>
           <ul className="EntryList__list" aria-live="polite">
-            {entries.map(entry => 
+            {dummyEntries.map(entry => 
               <EntryItem
                 key={entry.id}
                 {...entry}
