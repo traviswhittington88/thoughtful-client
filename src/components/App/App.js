@@ -88,7 +88,7 @@ export default class App extends Component {
   }
 
   deleteEntry = entryId => {
-
+    console.log('deleteEntry called', '\n', 'entryId is ', entryId)
   }
 
   componentDidMount() {

@@ -5,7 +5,8 @@ import EntryContext from '../../contexts/EntryContext'
 import './EntryItem.css'
 
 function deleteEntryRequest(entryId, callBack) {
-
+  console.log('delete entry')
+  callBack(entryId)
 }
 
 
