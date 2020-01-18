@@ -88,7 +88,12 @@ export default class App extends Component {
   }
 
   deleteEntry = entryId => {
-    console.log('deleteEntry called', '\n', 'entryId is ', entryId)
+    const filteredEntries = this.state.entries.filter(entry => entry.id !== entryId)
+    this.setState({ entries: filteredEntries })
+  }
+
+  filterEntriesByJournal(journalId) {
+    console.log('filterEntriesByJournal called \n journalId:',journalId)
   }
 
   componentDidMount() {

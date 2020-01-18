@@ -5,7 +5,6 @@ import EntryContext from '../../contexts/EntryContext'
 import './EntryItem.css'
 
 function deleteEntryRequest(entryId, callBack) {
-  console.log('delete entry')
   callBack(entryId)
 }
 
@@ -15,7 +14,7 @@ export default function EntryItem(props) {
     <EntryContext.Consumer>
       {(value) => {
         return (
-          <li className="EntryItem">
+          <li className="EntryItem" key={props.id}>
             <div className="entry">
               <header>
                 <h2 className="entry-heading">
