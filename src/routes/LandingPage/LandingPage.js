@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Link } from 'react-router-dom'
 import Nav from '../../components/Nav/Nav'
 import Footer from '../../components/Footer/Footer'
 import './LandingPage.css'
@@ -36,7 +37,7 @@ export default class LandingPage extends Component {
               <p>View your entries from each specific journal or via a whole list of your entries. Sort by date and time as well as category or subject</p>
             </section>
             <section className="member">
-              <a href='/'><h3>Become a thoughtful member today</h3></a>
+              <Link to="/signup"><h3>Become a thoughtful member today</h3></Link>
             </section>
           </div>
         </main>
