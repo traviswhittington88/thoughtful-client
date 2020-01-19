@@ -7,10 +7,6 @@ import EntryList from '../../components/EntryList/EntryList'
 
 
 export default class HomePage extends Component {
-    constructor(props) {
-      super(props)
-     console.log(this.props)
-    }
     render() {
         return (
           <>

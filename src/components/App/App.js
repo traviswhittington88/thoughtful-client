@@ -10,26 +10,27 @@ import EntryContentPage from '../../routes/EntryContentPage/EntryContentPage'
 import AddEntryPage from '../../routes/AddEntryPage/AddEntryPage'
 import AddJournalPage from '../../routes/AddJournalPage/AddJournalPage'
 import NotFoundPage from '../../routes/NotFoundPage/NotFoundPage'
+import { networkInterfaces } from 'os';
 
 const entries = [
   { 
     "id": 1,
-    "title": "entry #1",
-    "content": "What a day. I can't say I was surprised at the chaos which ensued upon our normally pleasant little lives..",
+    "title": "Ah...what's up doc?",
+    "content": `Wow what a day! I managed to escape that dopey hunter Fudd, Yosemite GoofHead, and some other notoriously dumb antagonists! not to mention.. I got to eat several delicious carrots.`,
     "journal_id": 4,
-    "pseudonym": "Roland Deschaine", 
-  },
-  {
-    "id": 2,
-    "title": "entry #2",
-    "content": "This is entry number two. Yoo. Hoo.",
-    "journal_id": 2,
     "pseudonym": "Bugs Bunny", 
   },
   {
+    "id": 2,
+    "title": "Today was a bad day",
+    "content": `Well where to begin? I blew myself up wit my own musket chasing dat twicky cawot eat'n, no good scwewy wabbit... guess I'll twy again next week`,
+    "journal_id": 2,
+    "pseudonym": "Elmer Fudd", 
+  },
+  {
     "id": 3,
-    "title": "entry #3",
-    "content": "this is entry number three.. Woop. Dee.",
+    "title": `Toot'n Hoot'n and Son of a Shoot'n`,
+    "content": `I'm the meanest, roughest, toughest hombre that's ever crossed the Rio Grande - and I ain't o namby-bamby!" "I'm the hootin'est, tootin'est, shootin'est, bob-tail wildcat, in the west!" "I'm the fastest gun north, south, east, aaaaaaaand west of the Pecos!" "When I say whoa, I mean whoa!"`,
     "journal_id": 1,
     "pseudonym": "Yosemite Sam",
   },
@@ -38,19 +39,19 @@ const entries = [
 const journals = [
   {
     "id": 1,
-    "name": "Daily Life"
+    "name": "Sam Says"
   },
   {
     "id": 2,
-    "name": "Music"
+    "name": "Elmer's Woes"
   },
   {
     "id": 3,
-    "name": "Work Life"
+    "name": "Worklife"
   },
   {
     "id": 4,
-    "name": "Future thoughts"
+    "name": "A Bugs Life"
   },
   {
     "id": 5,
@@ -85,7 +86,7 @@ export default class App extends Component {
   }
 
   addEntry = entries => {
-
+ 
   }
 
   deleteEntry = entryId => {
@@ -97,6 +98,8 @@ export default class App extends Component {
     const tempEntries = this.state.entries.filter(entry => entry.journal_id === journalId)
     this.setState({ dummyEntries: tempEntries })
   }
+
+
 
   componentDidMount() {
     this.setState(
