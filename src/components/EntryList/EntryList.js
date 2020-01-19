@@ -3,13 +3,15 @@ import { Link } from 'react-router-dom'
 import './EntryList.css'
 import EntryItem from '../EntryItem/EntryItem';
 import EntryContext from '../../contexts/EntryContext'
+import { getJournalName } from '../../helpers'
 
 export default class EntryList extends Component {
 
   static contextType = EntryContext
 
   render() {
-    const  { dummyEntries } = this.context
+    const  { dummyEntries, journals } = this.context
+
     return (
       <>
         <section className="EntryList">
@@ -21,8 +23,10 @@ export default class EntryList extends Component {
               <EntryItem
                 key={entry.id}
                 {...entry}
+                journal_name={getJournalName(entry, journals)}
               />
-            )}
+              )
+            }
             <button type="button" className="add-entry-button">
               <Link
                 to="/addentry"

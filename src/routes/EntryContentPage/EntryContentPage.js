@@ -21,7 +21,7 @@ export default class EntryContentPage extends Component {
     const selectedEntry  = dummyEntries.filter(entry => entry.id === parseInt(entryid))
     const [ journal_id ] = selectedEntry.map(entry => entry.journal_id)
     const journal = journals.filter(journal => journal.id === journal_id)
-    const [ journal_name ] = journal.map(journal => journal.name)
+    const journal_name = journal[0].name
 
 
     return (

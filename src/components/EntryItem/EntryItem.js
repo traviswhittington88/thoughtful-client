@@ -25,7 +25,7 @@ export default function EntryItem(props) {
                   </Link>
                 </h2>
                 <p>from</p>
-                <h3 className="entry-subheading">Journal {props.journal_id}</h3>
+                <h3 className="entry-subheading">{props.journal_name}</h3>
                 <p>by</p>
                 <h4>{props.pseudonym}</h4>
                 <h4>{props.date}</h4>
