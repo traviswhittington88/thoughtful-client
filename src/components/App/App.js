@@ -69,9 +69,9 @@ const journals = [
 
 export default class App extends Component {
   state = {
-    entries,
-    dummyEntries: entries,
-    journals,
+    entries: [],
+    dummyEntries: [],
+    journals: [],
     hasError: false
   }
 
@@ -89,18 +89,23 @@ export default class App extends Component {
   }
 
   deleteEntry = entryId => {
-    const filteredEntries = this.state.dummyEntries.filter(entry => entry.id !== entryId)
-    this.setState({ dummyEntries: filteredEntries })
+    const tempEntries = this.state.entries.filter(entry => entry.id !== entryId)
+    this.setState({ dummyEntries: tempEntries, entries: tempEntries })
   }
 
   filterEntriesByJournal = journalId => {
-    const newEntries = this.state.entries
-    const filteredEntries = newEntries.filter(entry => entry.journal_id === journalId)
-    this.setState({ dummyEntries: filteredEntries })
+    const tempEntries = this.state.entries.filter(entry => entry.journal_id === journalId)
+    this.setState({ dummyEntries: tempEntries })
   }
 
   componentDidMount() {
-    this.setState({ entries, journals })
+    this.setState(
+      { 
+        entries: entries,
+        dummyEntries: entries,
+        journals: journals, 
+      }
+    )
   }
 
 
