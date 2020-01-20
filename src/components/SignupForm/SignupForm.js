@@ -31,13 +31,18 @@ export default class SignupForm extends Component {
   }
 
 
+  bypassSignup = ev => {
+    this.props.onSignupSuccess()
+  }
+
 
   render() {
     const { error } = this.state
     return (
       <form
         className='signup-form'
-        onSubmit={this.handleSubmit}
+        /*onSubmit={this.handleSubmit}*/
+        onSubmit={this.bypassSignup}
       >
         <div role='alert'>
           {error && <p className='error'>{error}</p>}
