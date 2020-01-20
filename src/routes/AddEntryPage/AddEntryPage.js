@@ -4,8 +4,7 @@ import AddEntryForm from '../../components/AddEntryForm/AddEntryForm'
 import Nav from '../../components/Nav/Nav'
 import Footer from '../../components/Footer/Footer'
 
-export default class AddEntryPage extends Component {
-  render() {
+export default function AddEntryPage(props) {
     return (
     <>
       <Nav />
@@ -14,11 +13,11 @@ export default class AddEntryPage extends Component {
         <header role="banner" className="add-entry-header">
           <h2 className="add-entry-heading">New Entry</h2>
         </header>
-          <AddEntryForm />
+          <AddEntryForm history={props.history} />
         </section>
       </main>
       <Footer />
     </>
     )
-  }
 }
+

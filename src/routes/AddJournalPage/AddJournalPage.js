@@ -4,8 +4,7 @@ import Nav from '../../components/Nav/Nav'
 import Footer from '../../components/Footer/Footer'
 import AddJournalForm from '../../components/AddJournalForm/AddJournalForm'
 
-export default class AddJournalPage extends Component {
-  render() {
+export default function AddJournalPage(props) {
     return (
     <>
       <Nav />
@@ -14,11 +13,10 @@ export default class AddJournalPage extends Component {
             <header role="banner">
               <h1 className="ajp-heading">New Journal</h1>
             </header>
-            <AddJournalForm />
+            <AddJournalForm history={props.history}/>
           </section>
         </main>
       <Footer />
     </>
     )
-  }
 }

@@ -1,14 +1,14 @@
-#add-journal {
+#add_journal {
   margin: 0 auto;
   width: 90%;
   text-align: center;
 }
 
-#form-section {
+#form_section {
   margin: 0 auto;
 }
 
-.journal-title, #journal-title {
+.journal_title, #journal_title {
   display: block;
   margin: 0 auto;
   width: 100%;
@@ -18,7 +18,7 @@
 }
 
 
-#submit-button {
+#submit_button {
   background-color: white;
   height: 30px;
   width: 100px;

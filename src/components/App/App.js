@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Route, Switch } from 'react-router-dom'
 import './App.css';
+import { create_UUID } from '../../helpers'
 import EntryContext from '../../contexts/EntryContext'
 import LandingPage from '../../routes/LandingPage/LandingPage'
 import HomePage from '../../routes/HomePage/HomePage'
@@ -10,7 +11,7 @@ import EntryContentPage from '../../routes/EntryContentPage/EntryContentPage'
 import AddEntryPage from '../../routes/AddEntryPage/AddEntryPage'
 import AddJournalPage from '../../routes/AddJournalPage/AddJournalPage'
 import NotFoundPage from '../../routes/NotFoundPage/NotFoundPage'
-import { networkInterfaces } from 'os';
+
 
 const entries = [
   { 
@@ -69,24 +70,44 @@ const journals = [
 
 
 export default class App extends Component {
-  state = {
-    entries: [],
-    dummyEntries: [],
-    journals: [],
-    hasError: false
+  constructor(props) {
+    super(props)
+
+    this.state = {
+      entries: [],
+      dummyEntries: [],
+      journals: [],
+      dummyJournals: [],
+      hasError: false
+    }
   }
+ 
 
   static getDerivedStateFromError(error) {
     console.error(error)
     return { hasError: true }
   }
 
-  setEntries = entries => {
+  setEntries = () => {
+    this.setState({ dummyEntries: entries })
+  }
+
+  setJournals = journals => {
 
   }
 
-  addEntry = entries => {
- 
+  addEntry = (title, journal_name, content, pseudonym) => {
+    const tempEntries = this.state.dummyEntries
+    const [journal_id] = this.state.dummyJournals.filter(journal => journal.name === journal_name).map(journal => { return journal.id })
+    const newEntry = {
+      id: create_UUID(),
+      title,
+      content,
+      journal_id,
+      pseudonym,
+    }
+    tempEntries.push(newEntry)
+    this.setState({ dummyEntries: tempEntries, entries: tempEntries })
   }
 
   deleteEntry = entryId => {
@@ -94,19 +115,29 @@ export default class App extends Component {
     this.setState({ dummyEntries: tempEntries, entries: tempEntries })
   }
 
+  addJournal = (journal) => {
+    const tempJournals = this.state.journals
+    tempJournals.push({id: create_UUID(), name: journal })
+    this.setState({ dummyJournals: tempJournals })
+  }
+
   filterEntriesByJournal = journalId => {
     const tempEntries = this.state.entries.filter(entry => entry.journal_id === journalId)
     this.setState({ dummyEntries: tempEntries })
   }
 
+  componentWillUnmount() {
 
+  }
 
   componentDidMount() {
+
     this.setState(
       { 
         entries: entries,
         dummyEntries: entries,
-        journals: journals, 
+        journals: journals,
+        dummyJournals: journals,
       }
     )
   }
@@ -115,11 +146,15 @@ export default class App extends Component {
   render() {
     const contextValue = {
       dummyEntries: this.state.dummyEntries,
-      journals: this.state.journals,
+      dummyJournals: this.state.dummyJournals,
       addEntry: this.addEntry,
+      deleteEntry: this.deleteEntry,
+      setEntries: this.setEntries,
+      addJournal: this.addJournal,
       deleteEntry: this.deleteEntry,
       filterEntriesByJournal: this.filterEntriesByJournal,
     }
+
     return (
       <div className='App'>
         <header className='App__header'>
@@ -152,11 +187,19 @@ export default class App extends Component {
             />
             <Route
               path="/addentry"
-              component={AddEntryPage}
+              render={( { history }) =>
+                <React.Fragment>
+                  <AddEntryPage history={ history } />
+                </React.Fragment> 
+              }
             />
             <Route
               path="/addjournal"
-              component={AddJournalPage}
+              render={({ history }) =>
+                <React.Fragment>
+                  <AddJournalPage history={ history } />
+                </React.Fragment>
+              }
             />
             <Route
               component={NotFoundPage}

@@ -3,7 +3,7 @@
   width: 90%;
 }
 
-#entry-title, .entry-title, .entry-text, .journal-select {
+#entry-title, .entry-title, .entry-text, .pen_name, #pen_name, .journal-select {
   margin: 0 auto;
   width: 100%;
   text-align: center;
@@ -31,12 +31,12 @@
   font-size: 1.5em;
 }
 
-.entry-title, .entry-text, .journal-select {
+.entry-title, .entry-text, .pen_name, .journal-select {
   display: block;
   padding: 15px;
 }
 
-#entry-title, textarea, select {
+#entry-title, #pen_name, textarea, select {
   width: 90%;
   max-width: 500px;
 }
@@ -44,10 +44,26 @@
 select {
   height: 30px;
   background-color: white;
+  font-size: 16px;
+  text-align-last: center;
+  text-align: center;
+  -ms-text-align-last: center;
+  -moz-text-align-last: center;
 }
  
 
+@media screen and (min-width: 320px) {
+
+
+
+}
 
 @media screen and (min-width: 500px) {
 
+
+}
+
+@media screen and (min-width: 720px) {
+
+  
 }

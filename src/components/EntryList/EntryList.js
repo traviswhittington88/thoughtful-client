@@ -9,9 +9,15 @@ export default class EntryList extends Component {
 
   static contextType = EntryContext
 
+  getJournalName(entry, journals) {
+    const journal_id = entry.journal_id
+    const journal = journals.filter(journal => journal.id === journal_id)
+    const journal_name = journal[0].name 
+    return journal_name
+  }
+  
   render() {
-    const  { dummyEntries, journals } = this.context
-
+    const  { dummyEntries, dummyJournals } = this.context
     return (
       <>
         <section className="EntryList">
@@ -23,7 +29,7 @@ export default class EntryList extends Component {
               <EntryItem
                 key={entry.id}
                 {...entry}
-                journal_name={getJournalName(entry, journals)}
+                journal_name={this.getJournalName(entry, dummyJournals)}
               />
               )
             }

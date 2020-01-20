@@ -11,14 +11,14 @@ export default class JournalSidebar extends Component {
   static contextType = EntryContext
 
   render() {
-    const { journals } = this.context
+    const { dummyJournals } = this.context
     return (
       <>
         <header className="journalbar-header">
           <h2 className="journal-heading">Journals</h2>
         </header>
         <ul className="JournalSidebar__list" aria-live="polite">
-          {journals.map(journal =>
+          {dummyJournals.map(journal =>
           <JournalItem
             key={journal.id}
             {...journal}

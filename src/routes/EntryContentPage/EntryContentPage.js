@@ -16,14 +16,13 @@ export default class EntryContentPage extends Component {
   render() {
 
     const { entryid } = this.props.match.params
-    const { dummyEntries, journals } = this.context
-
-    const selectedEntry  = dummyEntries.filter(entry => entry.id === parseInt(entryid))
-    const [ journal_id ] = selectedEntry.map(entry => entry.journal_id)
-    const journal = journals.filter(journal => journal.id === journal_id)
-    const journal_name = journal[0].name
-
-
+    const { dummyEntries, dummyJournals } = this.context
+    const selectedEntry  = dummyEntries.filter(entry => entry.id.toString() === entryid.toString())
+    const journalIdOfEntry= selectedEntry.map(entry => entry.journal_id)
+    const journal_id = journalIdOfEntry[0]
+    const journalName = dummyJournals.filter(journal => journal.id === journal_id).map(journal => journal.name)
+    const journal_name = journalName[0]
+   
     return (
       <>
         <Nav />
@@ -31,7 +30,7 @@ export default class EntryContentPage extends Component {
             <div className="alt-container">
               <div className="alt-split alt-left">
                 <JournalSidebarAlt 
-                  journal_name={journal_name} 
+                  journal_name={journal_name}
                 />
               </div>
               <div className="alt-split alt-right">

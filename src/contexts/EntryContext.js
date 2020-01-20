@@ -1,12 +1,20 @@
 import React, { Component } from 'react'
 
+export const nullJournal = {
+  id: null,
+  name: '',
+}
 
 const EntryListContext = React.createContext({
   entries: [],
   dummyEntries: [],
   journals: [],
+  dummyJournals: [],
+  journal: nullJournal,
   addEntry: () => {},
   deleteEntry: () => {},
+  setEntries: () => {},
+  addJournal: () => {},
   filterEntriesByJournal: () => {},
 })
 

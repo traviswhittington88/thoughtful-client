@@ -1,5 +1,7 @@
 .EntryContentBlock {
   height: 100%;
+  width: 80%;
+  max-width: 500px;
 }
 
 .entry-content {
