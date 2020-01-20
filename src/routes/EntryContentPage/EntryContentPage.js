@@ -14,7 +14,6 @@ export default class EntryContentPage extends Component {
   static contextType = EntryContext
 
   render() {
-
     const { entryid } = this.props.match.params
     const { dummyEntries, dummyJournals } = this.context
     const selectedEntry  = dummyEntries.filter(entry => entry.id.toString() === entryid.toString())
@@ -37,6 +36,7 @@ export default class EntryContentPage extends Component {
                 {selectedEntry.map(entry =>
                 <EntryContent 
                   key={entry.id}
+                  history={this.props.history}
                   {...entry}
                 />
                 )}

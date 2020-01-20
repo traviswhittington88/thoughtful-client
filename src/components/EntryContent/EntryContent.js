@@ -2,7 +2,9 @@ import React, { Component } from 'react'
 import './EntryContent.css'
 import EntryContext from '../../contexts/EntryContext'
 
-
+function deleteEntryRequest(entryId, callBack) {
+  callBack(entryId)
+}
 
 export default function EntryContent(props) {
     return (
@@ -28,8 +30,16 @@ export default function EntryContent(props) {
                   </div>
                   <div className="wrapper rgt">
                     <button className="deleteButton"
-                      onClick={() => {}}
-                    >Delete</button>
+                      onClick={() => {
+                        deleteEntryRequest(
+                          props.id,
+                          value.deleteEntry,
+                        )
+                        props.history.push('/homepage')
+                      }}
+                    >
+                      Delete
+                    </button>
                   </div>
                 </div>
               </section>
