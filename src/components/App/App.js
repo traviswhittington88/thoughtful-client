@@ -1,6 +1,7 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 import { Route, Switch } from 'react-router-dom'
-import './App.css';
+import './App.css'
+import config from '../../config'
 import { create_UUID } from '../../helpers'
 import EntryContext from '../../contexts/EntryContext'
 import LandingPage from '../../routes/LandingPage/LandingPage'
@@ -13,10 +14,10 @@ import AddJournalPage from '../../routes/AddJournalPage/AddJournalPage'
 import NotFoundPage from '../../routes/NotFoundPage/NotFoundPage'
 
 
-const entries = [
+/*const entries = [
   { 
     "id": 1,
-    "title": "Ah...what's up doc?",
+    "title": `Ah...what's up doc?`,
     "content": `Wow what a day! I managed to escape that dopey hunter Fudd, Yosemite GoofHead, and some other notoriously dumb antagonists! not to mention.. I got to eat several delicious carrots.`,
     "journal_id": 4,
     "pseudonym": "Bugs Bunny", 
@@ -67,7 +68,7 @@ const journals = [
     "name": "Funny Thoughts"
   }
 ]
-
+*/
 
 export default class App extends Component {
   constructor(props) {
@@ -89,7 +90,19 @@ export default class App extends Component {
   }
 
   setEntries = () => {
-    this.setState({ dummyEntries: entries })
+    fetch(`${config.API_ENDPOINT}api/entries`)
+    .then(res => {
+      if(!res.ok) {
+        throw new Error(res.statusText)
+      }
+      return res.json()
+    })
+    .then(entries => {
+      this.setState({ dummyEntries: entries, entries: entries })
+    })
+    .catch(err => {this.setState({ error: err.message })})
+  
+    /*this.setState({ dummyEntries: this.state.entries })*/
   }
 
   setJournals = journals => {
@@ -97,49 +110,133 @@ export default class App extends Component {
   }
 
   addEntry = (title, journal_name, content, pseudonym) => {
-    const tempEntries = this.state.dummyEntries
     const [journal_id] = this.state.dummyJournals.filter(journal => journal.name === journal_name).map(journal => { return journal.id })
     const newEntry = {
-      id: create_UUID(),
+      //id: create_UUID(),
       title,
       content,
       journal_id,
       pseudonym,
     }
-    tempEntries.push(newEntry)
-    this.setState({ dummyEntries: tempEntries, entries: tempEntries })
+
+    const obj = {
+      method: 'POST',
+      body: JSON.stringify(newEntry),
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    } 
+    fetch(`${config.API_ENDPOINT}api/entries`,obj)
+    .then(res => {
+      if(!res.ok) {
+        throw new Error(res.statusText)
+      }
+      return res.json();
+     
+    })
+    .then(entry => {  
+      const tempEntries = this.state.dummyEntries
+      tempEntries.push(entry)
+      this.setState({ dummyEntries: tempEntries, entries: tempEntries })
+    })
+    .catch(error => this.setState({ error:error.message })) 
+
+    /*tempEntries.push(newEntry)
+    this.setState({ dummyEntries: tempEntries, entries: tempEntries })*/
   }
 
   deleteEntry = entryId => {
+    fetch(`${config.API_ENDPOINT}api/entries/${entryId}`, {
+      method: 'DELETE',
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    })
     const tempEntries = this.state.entries.filter(entry => entry.id !== entryId)
     this.setState({ dummyEntries: tempEntries, entries: tempEntries })
   }
 
-  addJournal = (journal) => {
+  addJournal = (journal_name) => {
+    const obj = {
+      method: 'POST',
+      body: JSON.stringify({name: journal_name}),
+      headers: {
+        'Content-Type': 'application/json',
+      }
+    }
+
+     
+    fetch(`${config.API_ENDPOINT}api/journals`,obj)
+    .then(res => {
+      if(!res.ok) {
+        throw new Error(res.statusText)
+      }
+      return res.json();
+    })
+    .then(journal => {
+      const tempJournals = this.state.journals
+      tempJournals.push(journal);
+      this.setState({ dummyJournals: tempJournals, journals: tempJournals })
+    })
+    .catch(error => this.setState({ error: error.message }))
+    /*
     const tempJournals = this.state.journals
     tempJournals.push({id: create_UUID(), name: journal })
-    this.setState({ dummyJournals: tempJournals })
+    this.setState({ dummyJournals: tempJournals }) */
+
   }
 
-  filterEntriesByJournal = journalId => {
-    const tempEntries = this.state.entries.filter(entry => entry.journal_id === journalId)
-    this.setState({ dummyEntries: tempEntries })
-  }
+  filterEntriesByJournal = journal_id => {
+    fetch(`${config.API_ENDPOINT}api/entries/journal/${journal_id}`)
+    .then(res => {
+      if(!res.ok) {
+        throw new Error(res.statusText)
+      }
+      return res.json()
+    })
+    .then(entries => {
+      this.setState({ dummyEntries: entries, entries: entries })
+    })
+    .catch(err => {this.setState({ error: err.message })})
 
-  componentWillUnmount() {
-
+    /*const tempEntries = this.state.entries.filter(entry => entry.journal_id === journalId)
+    this.setState({ dummyEntries: tempEntries })  */
   }
 
   componentDidMount() {
+    fetch(`${config.API_ENDPOINT}api/journals`)
+      .then(res => {
+        if(!res.ok) {
+          throw new Error(res.statusText)
+        }
+        return res.json()
+      })
+      .then(journals => this.setState({ dummyJournals: journals, journals: journals }))
+      .catch(err => {this.setState({ error: err.message })})
 
-    this.setState(
+    fetch(`${config.API_ENDPOINT}api/entries`)
+      .then(res => {
+        if(!res.ok) {
+          throw new Error(res.statusText)
+        }
+        return res.json()
+      })
+      .then(entries => {
+        this.setState({ entries: entries, dummyEntries: entries })
+      })
+      .catch(err => {this.setState({ error: err.message })})
+    
+    /*this.setState(
       { 
         entries: entries,
         dummyEntries: entries,
         journals: journals,
         dummyJournals: journals,
       }
-    )
+    )*/
+
+    
+
   }
 
 
