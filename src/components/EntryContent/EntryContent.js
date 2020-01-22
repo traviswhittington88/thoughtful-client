@@ -17,7 +17,7 @@ export default function EntryContent(props) {
               <header className="EntryInfo">
                 <h2>{props.title}</h2>
                 <p>by</p>
-                <h3>{console.log(props.pseudonym)}</h3>
+                <h3>{props.pseudonym}</h3>
                 <p>
                   <Moment interval={0} format="Do MMM YYYY" className="date_created">
                     {props.date_created}
