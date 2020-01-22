@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import './EntryContent.css'
 import EntryContext from '../../contexts/EntryContext'
+import Moment from 'react-moment';
+import 'moment-timezone';
 
 function deleteEntryRequest(entryId, callBack) {
   callBack(entryId)
@@ -15,8 +17,12 @@ export default function EntryContent(props) {
               <header className="EntryInfo">
                 <h2>{props.title}</h2>
                 <p>by</p>
-                <h3>{props.pseudonym}</h3>
-                <p>January 1 2020</p>   {/*make dynamic date later */}
+                <h3>{console.log(props.pseudonym)}</h3>
+                <p>
+                  <Moment interval={0} format="Do MMM YYYY" className="date_created">
+                    {props.date_created}
+                  </Moment>
+                </p>
               </header>
               <section className="content-section">
                 <div className="content-box">
