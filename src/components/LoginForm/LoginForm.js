@@ -52,8 +52,7 @@ export default class LoginForm extends Component {
     return (
       <form
         className='login-form'
-        /*onSubmit={this.handleSubmitJwtAuth}*/
-        onSubmit={this.bypassLogin}
+        onSubmit={this.handleSubmitJwtAuth}
       >
         <div role='alert'>
             {error && <p className='error'>{error}</p>}
