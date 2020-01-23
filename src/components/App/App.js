@@ -212,11 +212,7 @@ export default class App extends Component {
             />
             <Route
               path="/addjournal"
-              render={({ history }) =>
-                <React.Fragment>
-                  <AddJournalPage history={ history } />
-                </React.Fragment>
-              }
+              component={AddJournalPage}
             />
             <Route
               component={NotFoundPage}
