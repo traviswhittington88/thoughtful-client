@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React from 'react'
 import './JournalSidebarAlt.css'
 
 export default function JournalSidebarAlt(props) {

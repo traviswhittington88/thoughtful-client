@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React from 'react'
 import './AddEntryPage.css'
 import AddEntryForm from '../../components/AddEntryForm/AddEntryForm'
 import Nav from '../../components/Nav/Nav'

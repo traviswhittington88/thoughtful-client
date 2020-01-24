@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React from 'react'
 
 export const nullJournal = {
   id: null,
@@ -8,13 +8,17 @@ export const nullJournal = {
 const EntryListContext = React.createContext({
   entries: [],
   dummyEntries: [],
+  selectedEntry: {},
   journals: [],
   dummyJournals: [],
   journal: nullJournal,
   addEntry: () => {},
+  editEntry: () => {},
   deleteEntry: () => {},
   setEntries: () => {},
   addJournal: () => {},
+  deleteJournal: () =>{},
+  editJournal: () => {},
   filterEntriesByJournal: () => {},
 })
 

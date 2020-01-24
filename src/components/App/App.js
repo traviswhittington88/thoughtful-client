@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { Route, Switch } from 'react-router-dom'
 import './App.css'
 import config from '../../config'
+import TokenService from '../../services/token-service'
 import EntryContext from '../../contexts/EntryContext'
 import LandingPage from '../../routes/LandingPage/LandingPage'
 import HomePage from '../../routes/HomePage/HomePage'
@@ -9,6 +10,8 @@ import LoginPage from '../../routes/LoginPage/LoginPage'
 import SignupPage from '../../routes/SignupPage/SignupPage'
 import EntryContentPage from '../../routes/EntryContentPage/EntryContentPage'
 import AddEntryPage from '../../routes/AddEntryPage/AddEntryPage'
+import EditEntryPage from '../../routes/EditEntryPage/EditEntryPage'
+import EditJournalPage from '../../routes/EditJournalPage/EditJournalPage'
 import AddJournalPage from '../../routes/AddJournalPage/AddJournalPage'
 import NotFoundPage from '../../routes/NotFoundPage/NotFoundPage'
 
@@ -44,7 +47,7 @@ export default class App extends Component {
     .catch(err => { this.setState({ error: err.message })})
   }
 
-  setJournals = journals => {
+  setJournals = () => {
     fetch(`${config.API_ENDPOINT}api/journals`)
     .then(res => {
       if(!res.ok) {
@@ -88,6 +91,27 @@ export default class App extends Component {
       this.setState({ dummyEntries: tempEntries, entries: tempEntries })
     })
     .catch(error => this.setState({ error:error.message })) 
+  }
+
+  editEntry = (id, title, content, pseudonym) => {
+    const updatedEntry = {
+      title,
+      content,
+      pseudonym
+    }
+
+    const obj = {
+      method: 'PATCH',
+      body: JSON.stringify(updatedEntry),
+      headers: {
+        'content-type': 'application/json',
+        'authorization': `bearer ${TokenService.getAuthToken()}`,
+      }
+    }
+
+    fetch(`${config.API_ENDPOINT}api/entries/${id}`,obj)
+      .then(updatedEntry => console.log(updatedEntry))
+
   }
 
   deleteEntry = entryId => {
@@ -169,11 +193,13 @@ export default class App extends Component {
     const contextValue = {
       dummyEntries: this.state.dummyEntries,
       dummyJournals: this.state.dummyJournals,
+      selectedEntry: this.state.selectedEntry,
       addEntry: this.addEntry,
+      editEntry: this.editEntry,
       deleteEntry: this.deleteEntry,
       setEntries: this.setEntries,
+      setSelectedEntry: this.setSelectedEntry,
       addJournal: this.addJournal,
-      deleteEntry: this.deleteEntry,
       filterEntriesByJournal: this.filterEntriesByJournal,
     }
 
@@ -211,8 +237,16 @@ export default class App extends Component {
               component={AddEntryPage}
             />
             <Route
+              path="/editentry/:entryid"
+              component={EditEntryPage}
+            />
+            <Route
               path="/addjournal"
               component={AddJournalPage}
+            />
+            <Route
+              path="/editjournal/:journalid"
+              component={EditJournalPage}
             />
             <Route
               component={NotFoundPage}

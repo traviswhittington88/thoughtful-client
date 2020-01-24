@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React from 'react'
 import './AddJournalPage.css'
 import Nav from '../../components/Nav/Nav'
 import Footer from '../../components/Footer/Footer'

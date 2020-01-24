@@ -1,8 +1,10 @@
-import React, { Component } from 'react'
+import React from 'react'
+import { Link } from 'react-router-dom'
 import './EntryContent.css'
 import EntryContext from '../../contexts/EntryContext'
 import Moment from 'react-moment';
 import 'moment-timezone';
+
 
 function deleteEntryRequest(entryId, callBack) {
   callBack(entryId)
@@ -32,7 +34,11 @@ export default function EntryContent(props) {
                 </div>
                 <div className="button-box">
                   <div className="wrapper lft">
-                    <button className="editButton">Edit</button>
+                    <button className="editButton">
+                      <Link to={`/editentry/${props.id}`}>
+                        Edit
+                      </Link>
+                    </button>
                   </div>
                   <div className="wrapper rgt">
                     <button className="deleteButton"
