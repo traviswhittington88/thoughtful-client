@@ -61,7 +61,11 @@ export default class EditEntryForm extends Component {
   componentDidMount() {
     const entryid = this.props.match.params.entryid
     fetch(`${config.API_ENDPOINT}api/entries/${entryid}`,{
-      method: 'GET'
+      method: 'GET',
+      headers: {
+        'content-type': 'application/json',
+        'authorization': `bearer ${TokenService.getAuthToken()}`,
+      }
     })
     .then(res => {
       if(!res.ok) {

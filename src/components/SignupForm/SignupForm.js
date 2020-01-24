@@ -12,8 +12,15 @@ export default class SignupForm extends Component {
 
   handleSubmit = ev => {
     ev.preventDefault()
-    const { full_name, pseudonym, user_name, password } = ev.target
-    const newUser = { full_name, pseudonym, user_name, password }
+    const { user_name, full_name, pseudonym, password } = ev.target
+    const newUser = { 
+      user_name: user_name.value,
+      full_name: full_name.value,
+      pseudonym: pseudonym.value, 
+      password: password.value, 
+    }
+
+    console.log(newUser)
 
     this.setState({ error: null })
 
@@ -27,22 +34,15 @@ export default class SignupForm extends Component {
       })
       .catch(res => {
         this.setState({ error: res.error })
-      })
+      }) 
   }
-
-
-  bypassSignup = ev => {
-    this.props.onSignupSuccess()
-  }
-
 
   render() {
     const { error } = this.state
     return (
       <form
         className='signup-form'
-        /*onSubmit={this.handleSubmit}*/
-        onSubmit={this.bypassSignup}
+        onSubmit={this.handleSubmit}
       >
         <div role='alert'>
           {error && <p className='error'>{error}</p>}
@@ -78,7 +78,7 @@ export default class SignupForm extends Component {
           />
         </div>
         <div className='pseudonym'>
-          <label htmlFor='pseudonym' className="label">Pseudonym</label>
+          <label htmlFor='pseudonym' className="label">*Pseudonym</label>
           <input
             name='pseudonym'
             type='text'

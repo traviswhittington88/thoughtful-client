@@ -148,10 +148,17 @@ export default class App extends Component {
       this.setState({ dummyJournals: tempJournals, journals: tempJournals })
     })
     .catch(error => this.setState({ error: error.message }))
+    console.log(this.state.dummyJournals)
   }
 
   filterEntriesByJournal = journal_id => {
-    fetch(`${config.API_ENDPOINT}api/entries/journal/${journal_id}`)
+    fetch(`${config.API_ENDPOINT}api/entries/journal/${journal_id}`, {
+      method: 'GET',
+      headers: {
+        'content-type': 'application/json',
+        'authorization': `bearer ${TokenService.getAuthToken()}`
+      }
+    })
     .then(res => {
       if(!res.ok) {
         throw new Error(res.statusText)
