@@ -45,7 +45,7 @@ export default class Nav extends Component {
         <nav role="navigation" className="nav">
           <div className="item name">
             <Link
-              to='/'
+              to='/homepage'
               className="title"
             >
               <h3>Thoughtful</h3>
