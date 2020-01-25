@@ -20,7 +20,7 @@ export default class LandingPage extends Component {
                 <h3>Sign up and login to begin!</h3>
                   <p>1. Enter your name (make it up if you like!)</p>
                   <p>2. Create a username (as long as it's not taken!)</p>
-                  <p>3. Give yourself a nickname! Who is your favorite character</p>
+                  <p>3. Give yourself a nickname! Who is your favorite character?</p>
                   <p>4. Pick a password! Must be a minimum of 8 characters: at least 1 number, uppercase and special character!</p>
                   <p>5. Next login with your new account and start sharing your thoughts on Thoughtful's shared platform!</p>
               </header>
