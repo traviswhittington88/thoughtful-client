@@ -120,7 +120,8 @@ export default class App extends Component {
     fetch(`${config.API_ENDPOINT}api/entries/${entryId}`, {
       method: 'DELETE',
       headers: {
-        'Content-Type': 'application/json'
+        'content-type': 'application/json',
+        'authorization': `bearer ${TokenService.getAuthToken()}`,
       }
     })
     const tempEntries = this.state.entries.filter(entry => entry.id !== entryId)
@@ -132,7 +133,8 @@ export default class App extends Component {
       method: 'POST',
       body: JSON.stringify({name: journal_name}),
       headers: {
-        'Content-Type': 'application/json',
+        'content-type': 'application/json',
+        'authorization': `bearer ${TokenService.getAuthToken()}`,
       }
     }
 
