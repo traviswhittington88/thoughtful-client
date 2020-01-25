@@ -52,7 +52,8 @@ export default class EditEntryForm extends Component {
       }
     }
     fetch(`${config.API_ENDPOINT}api/entries/${this.props.match.params.entryid}`,obj)
-    .then(() => {
+    .then(updatedEntry => {
+      console.log(updatedEntry)
       this.context.setEntries()
     })
     this.props.history.push(`/entry/${this.props.match.params.entryid}`)

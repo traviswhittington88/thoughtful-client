@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 import { Route, Switch } from 'react-router-dom'
+import PrivateRoute from '../Utils/PrivateRoute'
+import PublicOnlyRoute from '../Utils/PublicOnlyRoute'
 import './App.css'
 import config from '../../config'
 import TokenService from '../../services/token-service'
@@ -222,36 +224,36 @@ export default class App extends Component {
               path='/'
               component={LandingPage}
             />
-            <Route
+            <PrivateRoute
               exact
               path='/homepage'
               component={HomePage}
             />
-            <Route
+            <PublicOnlyRoute
               path='/signup'
               component={SignupPage}
             />
-            <Route
+            <PublicOnlyRoute
               path='/login'
               component={LoginPage}
             />
-            <Route
+            <PrivateRoute
               path="/entry/:entryid"
               component={EntryContentPage}
             />
-            <Route
+            <PrivateRoute
               path="/addentry"
               component={AddEntryPage}
             />
-            <Route
+            <PrivateRoute
               path="/editentry/:entryid"
               component={EditEntryPage}
             />
-            <Route
+            <PrivateRoute
               path="/addjournal"
               component={AddJournalPage}
             />
-            <Route
+            <PrivateRoute
               path="/editjournal/:journalid"
               component={EditJournalPage}
             />
