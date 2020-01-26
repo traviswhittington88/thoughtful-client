@@ -1,7 +1,42 @@
+main {
+  background: rgba(0,0,0,0.9);
+  margin: 0;
+  color: #fff;
+
+}
+
 .signup-page {
-  background-color: #bbb;
   min-height: 320px;
   padding: 10px 5px 55px 5px;
+}
+
+.signup-page {
+  min-height: 200px;
+  padding: 10px 5px 55px 5px;
+}
+
+.signup-page::after {
+  content: '';
+  height: 100vh;
+  width: 100%;
+  background-image: url(showcase.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: block;
+  filter: blur(10px);
+  -webkit-filter: blur(10px);
+  transition: all 1000ms;
+}
+
+.signup-page:hover::after {
+  filter: blur(0px);
+  -webkit-filter: blur(0px);
+}
+
+.signup-page:hover .signup-content {
+  filter: blur(0px);
+  -webkit-filter: blur(0px);
 }
 
 @media screen and (min-width: 320px) {   /* iPhone 4 */
