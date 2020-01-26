@@ -1,12 +1,21 @@
 .nav {
   padding: 2% 0;
-  background-color: grey;
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   z-index: 10;
   text-align: center;
+}
+
+.bg-light {
+  background: #f4f4f4;
+  color: #333;
+}
+
+.bg-dark {
+  background: #333;
+  color: #f4f4f4;
 }
 
 .item {

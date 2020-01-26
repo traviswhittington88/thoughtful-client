@@ -1,4 +1,12 @@
 footer {
 padding: 1% 0;
-background-color: grey;
+}
+
+footer p {
+  margin: 0 auto;
+}
+
+.bg-dark {
+  background: #333;
+  color: #f4f4f4;
 }

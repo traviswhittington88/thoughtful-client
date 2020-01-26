@@ -42,7 +42,7 @@ export default class Nav extends Component {
 
   render() {
       return (
-        <nav role="navigation" className="nav">
+        <nav role="navigation" className="nav bg-light">
           <div className="item name">
             <Link
               to='/homepage'
