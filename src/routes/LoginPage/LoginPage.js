@@ -29,9 +29,9 @@ export default class LoginPage extends Component {
               <header role="banner" className="header">
                 <h2>Login</h2>
               </header>
-              <LoginForm
-                onLoginSuccess={this.handleLoginSuccess}
-              />
+              <div className="login-content">
+              <LoginForm onLoginSuccess={this.handleLoginSuccess} />
+              </div>
             </section>
           </main>
           <Footer />

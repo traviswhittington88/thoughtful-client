@@ -35,7 +35,7 @@ export default class LandingPage extends Component {
                 <div>
                   <FontAwesomeIcon icon={faEdit} size="3x" />
                   <h3>Add Edit and Delete Your Entries</h3>
-                  <p>Add or delete entries from any of your journals</p>
+                  <p>Have a thought, change that thought or delete it forever</p>
                 </div>
                 <div>
                   <FontAwesomeIcon icon={faGlasses} size="3x" />

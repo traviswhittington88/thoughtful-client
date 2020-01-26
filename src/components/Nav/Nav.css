@@ -8,6 +8,11 @@
   text-align: center;
 }
 
+.logo {
+  width: 300px;
+  height: 200px;
+}
+
 .bg-light {
   background: #f4f4f4;
   color: #333;

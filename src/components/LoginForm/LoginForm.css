@@ -1,6 +1,7 @@
 .login-form {
   margin: 0 auto;
   width: 60%;
+  padding-top: 30px;
 }
 
 #label, .input {
@@ -17,10 +18,10 @@
 }
 
 
-@media screen and (min-width: 500px) {
+@media screen and (min-width: 700px) {
 
   .login-form {
-    width: 80%;
+    width: 95%;
   } 
 
   #label, .input {
@@ -35,7 +36,7 @@
   }
 
   #label + .input {
-    width: 30%;
+    width: 35%;
     /* Large margin-right (30%) to force the next element to the new line
        and margin-left to create a gutter (space) between the #label and #input */
     margin: 0 30% 0 4%;
@@ -43,7 +44,7 @@
 
   #submit {
     text-align: center;
-    width: 30%;
+    width: 35%;
     height: 25px;
     margin-left: 4%;
   }
