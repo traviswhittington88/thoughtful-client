@@ -21,7 +21,7 @@ export default class LandingPage extends Component {
                   Welcome To Thoughtful 
                 </div>
                 <div className="text">
-                  Lorem Ipsum dolor sit amet 
+                  An anonymous place to share your thoughts
                 </div>
               </div>
             </header>
@@ -30,17 +30,17 @@ export default class LandingPage extends Component {
                 <div>
                   <FontAwesomeIcon icon={faPencilAlt} size="3x" />
                   <h3>Create A Journal</h3>
-                  <p>A thoughtful journal is a way to begin storing those ever existing ideas, dreams, beliefs and feelings into a sacred place of your own</p>
+                  <p>A thoughtful journal is a way to begin storing your powerful ideas and sharing them with our community</p>
                 </div>
                 <div>
                   <FontAwesomeIcon icon={faEdit} size="3x" />
-                  <h3>Add and delete your entries</h3>
+                  <h3>Add Edit and Delete Your Entries</h3>
                   <p>Add or delete entries from any of your journals</p>
                 </div>
                 <div>
                   <FontAwesomeIcon icon={faGlasses} size="3x" />
-                  <h3>Read your entries</h3>
-                  <p>View your entries from each specific journal or via a whole list of your entries. Sort by date and time as well as category or subject</p>
+                  <h3>Read Your Entries</h3>
+                  <p>View entries from a specific journal or as a complete list.</p>
                 </div>
               </div>
             </section>
