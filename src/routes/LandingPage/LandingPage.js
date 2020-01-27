@@ -51,8 +51,12 @@ export default class LandingPage extends Component {
                     <FontAwesomeIcon icon={faLaptopCode} size="10x" />
                   </div>
                   <div>
-                    <h3>About Us</h3>
-                    <p>Lorem Ipsum dolor</p>
+                    <h3>About Us And You</h3>
+                    <p>Thoughtful INC. is an organization that serves the collective needs of the user. Our mission is to 
+                      design journaling applications that emphasize anonymity, plurality and freedom of expression. We 
+                      at Thoughtful believe that profile-driven sites can often hinder honest human interaction and therefore
+                      we see fit to provide an alternative creative outlet for our community. Enjoy!
+                    </p>
                   </div>
                 </div>
               </div>
