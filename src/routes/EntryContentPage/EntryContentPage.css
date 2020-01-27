@@ -5,7 +5,7 @@
 .alt-container {
   display: flex;
   flex-direction: row;
-  height: 100%;
+  height: 100vh;
 }
 
 .alt-split {

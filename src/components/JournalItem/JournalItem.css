@@ -1,14 +1,22 @@
 .journal {
-  margin: 0 auto;
-  width: 95%;
+  margin: 5px auto;
+  width: 90%;
   font-size: 12px;
-  background-color: grey;
-  border: none;
+  background-image: url(../../images/crumpledPaperJournal.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  border: 1px solid grey;
   text-align: center;
   cursor: pointer;
   border-radius: 4px;
+  color: black;
 }
 
 .journal:nth-child(even) {
-  background-color: lightgrey;
+  /*background-image: url(../../images/journal_background.jpg);*/
+}
+
+.journal:hover {
+  transform: scale(1.05);
 }
