@@ -16,7 +16,7 @@ export default function EntryItem(props) {
         return (
           <li className="EntryItem" key={props.id}>
             <div className="entry">
-              <header>
+              <header className="entry-header">
                 <h2 className="entry-heading">
                   <Link 
                     to={`/entry/${props.id}`}

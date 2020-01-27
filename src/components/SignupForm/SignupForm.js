@@ -67,6 +67,15 @@ export default class SignupForm extends Component {
             className="input"
           />
         </div>
+        <div className='pseudonym'>
+          <label htmlFor='pseudonym' className="label">*Pseudonym</label>
+          <input
+            name='pseudonym'
+            type='text'
+            id='pseudonym'
+            className="input"
+          />
+        </div>
         <div className='password'>
           <label htmlFor='password' className="label">*Password</label>
           <input
@@ -77,16 +86,16 @@ export default class SignupForm extends Component {
             className="input"
           />
         </div>
-        <div className='pseudonym'>
-          <label htmlFor='pseudonym' className="label">*Pseudonym</label>
-          <input
-            name='pseudonym'
-            type='text'
-            id='pseudonym'
-            className="input"
-          />
-        </div>
         <button type='submit' className="submit">Sign up</button>
+        <div className="list-wrapper">
+          <ul className="unordered-list">
+            <li>Minimum 8 characters</li>
+            <li>One uppercase character</li>
+            <li>One lowercase character</li>
+            <li>One special character</li>
+            <li>One number</li>
+          </ul>
+        </div>
       </form>
     )
   }
