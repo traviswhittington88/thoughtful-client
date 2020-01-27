@@ -1,11 +1,11 @@
 .entryContentPage {   /* if this works without style issues on small phones move to global css as a rule */
- height: auto;
+ height: 100vh;
 }
 
 .alt-container {
   display: flex;
   flex-direction: row;
-  height: 100vh;
+  height: 100%;
 }
 
 .alt-split {
