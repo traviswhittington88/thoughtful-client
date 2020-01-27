@@ -34,14 +34,19 @@ export default function EntryContent(props) {
                 </div>
                 <div className="button-box">
                   <div className="wrapper lft">
-                    <button className="editButton">
-                      <Link to={`/editentry/${props.id}`}>
-                        Edit
-                      </Link>
+                    <button
+                      type="button"
+                      className="editButton"
+                      >
+                        <Link to={`/editentry/${props.id}`}>
+                          Edit
+                        </Link>
                     </button>
                   </div>
                   <div className="wrapper rgt">
-                    <button className="deleteButton"
+                    <button 
+                      type="button"
+                      className="deleteButton"
                       onClick={() => {
                         deleteEntryRequest(
                           props.id,
