@@ -19,6 +19,11 @@
 .container {
   display: flex;
   flex-direction: row;
+  border-top: 1px solid white;
+  background-image: url(plank.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 
 }
 
@@ -28,21 +33,21 @@
 }
 
 .left {
-  width: 100%;
-  background-image: url(plank.jpg);
+
+ /* background-image: url(plank.jpg);
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center;
-  color: #fff;
+  background-position: center; */
+  color: #fff; 
   width: 35%;
 }
 
 .right {
   width: 65%;
-  background-image: url(plank.jpg);
+ /* background-image: url(plank.jpg);
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: center; */
   color: #fff;
 }
 
