@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import TokenService from '../../services/token-service'
 import './Nav.css'
-import logo from './logo.png'
+import logo from '../../images/logo_black.png'
 
 
 export default class Nav extends Component {

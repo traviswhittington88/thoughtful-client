@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom'
 import Nav from '../../components/Nav/Nav'
 import Footer from '../../components/Footer/Footer'
 import './LandingPage.css'
-import logo from './logo.png'
+import logo from '../../images/logo_white.png'
 
 export default class LandingPage extends Component {
   render() {

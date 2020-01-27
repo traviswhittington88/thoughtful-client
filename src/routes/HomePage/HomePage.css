@@ -5,7 +5,7 @@
 .homepage-header {
   padding: 12px 10px 1px 10px;
   width: 100%;
-  background-image: url(showcase.jpg);
+  background-image: url(../../images/showcase.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -30,16 +30,15 @@
 
 .left {
   width: 35%;
-  background-image: url(background-small.jpg);
+  background-image: url(../../images/background-small.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  border-right: 1px solid white;
 }
 
 .right {
   width: 65%;
-  background-image: url(plank.jpg);
+  background-image: url(../../images/plank.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;

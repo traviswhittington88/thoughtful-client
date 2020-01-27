@@ -1,7 +1,11 @@
 .add-entry-page {
-  background-color: #bbb;
   min-height: 200px;
   padding: 10px 5px 55px 5px;
+  width: 100%;
+  background-image: url(../../images/showcase.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 @media screen and (min-width: 320px) {   /* iPhone 4 */
