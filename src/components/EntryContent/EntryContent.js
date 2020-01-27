@@ -33,7 +33,6 @@ export default function EntryContent(props) {
                   </p>
                 </div>
                 <div className="button-box">
-                  <div className="wrapper lft">
                     <button
                       type="button"
                       className="editButton"
@@ -42,8 +41,6 @@ export default function EntryContent(props) {
                           Edit
                         </Link>
                     </button>
-                  </div>
-                  <div className="wrapper rgt">
                     <button 
                       type="button"
                       className="deleteButton"
@@ -57,7 +54,6 @@ export default function EntryContent(props) {
                     >
                       Delete
                     </button>
-                  </div>
                 </div>
               </section>
             </div>
