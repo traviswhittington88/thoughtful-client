@@ -17,6 +17,11 @@
   padding-top: 20px;
   margin: 0 auto;  /*don't think these last 2 are necessary but need to ask */
   text-align: center;
+  width: 100%;
+  background-image: url(showcase.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
   
 }
 

@@ -4,10 +4,16 @@
 
 .homepage-header {
   padding: 12px 10px 1px 10px;
+  width: 100%;
+  background-image: url(showcase.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .homepage-heading {
   font-size: 1.2em;
+  color: white;
 }
 
 .container {
@@ -22,13 +28,22 @@
 }
 
 .left {
-  background-color: #eee;
+  width: 100%;
+  background-image: url(plank.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  color: #fff;
   width: 35%;
 }
 
 .right {
-  background-color: #ddd;
   width: 65%;
+  background-image: url(plank.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  color: #fff;
 }
 
 @media screen and (min-width: 320px) {

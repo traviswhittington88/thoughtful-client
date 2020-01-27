@@ -3,7 +3,10 @@
   width: 95%;
   font-size: 12px;
   background-color: grey;
+  border: none;
+  text-align: center;
   cursor: pointer;
+  border-radius: 4px;
 }
 
 .journal:nth-child(even) {

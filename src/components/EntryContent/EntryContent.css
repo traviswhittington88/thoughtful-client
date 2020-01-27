@@ -11,22 +11,22 @@
 .button-box {
   display: flex;
   flex-direction: row;
-  background-color: darkgrey;
+  justify-content: space-around;
 }
 
 .wrapper {
-  width: 50%;
+  width: 45%;
   height: 35px;
-  background-color: lightgrey;
 }
 
-.wrapper:nth-child(even) {
+/*.wrapper:nth-child(even) {
   background-color: darkgrey;
-}
+}*/
 
 .editButton, .deleteButton {
   height: 100%;
   width: 100%;
+
 }
 
 @media screen and (min-width: 320px) {   /* iPhone 4 */

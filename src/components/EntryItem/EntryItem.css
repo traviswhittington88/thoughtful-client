@@ -1,5 +1,19 @@
+.entry-header {
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
 .entry-heading {
   font-size: 16px;
+}
+
+.entry-heading a {
+  color: white;
+}
+
+.entry-heading a:hover,
+.entry-heading a:focus,
+.entry-heading a:active {
+  color: darkgray;
 }
 
 .entry-subheading {
@@ -12,12 +26,19 @@
 
 .EntryItem {
   padding: 5px;
-  background-color: #bbb;
+  background: rgba(0,0,0,0.9);
+  background-image: url(blur.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  color: #fff;
+  border-bottom: #333 solid 5px;
+    padding: 1.2rem 1rem;
 }
 
-.EntryItem:nth-child(even) {
+/*.EntryItem:nth-child(even) {
   background-color: #ddd
-}
+} */
 
 .EntryItem > p {
   margin: 0 auto;
@@ -26,6 +47,22 @@
 
 .EntryItem > p + p {
   margin-top: 15px;
+}
+
+.delete-entry-button {
+  border: none;
+  padding: 6px 12px;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 4px;
+}
+  
+.delete-entry-button:hover,
+.delete-entry-button:focus,
+.delete-entry-button:active {
+  color: #fff;
+  background-color: black;
+  border-color: white;
 }
 
 @media screen and (min-width: 320px) {
@@ -61,6 +98,16 @@
   
   .entry-subheading {
     font-size: 1.17em;
+  }
+
+  .delete-entry-button {
+    width: 100px;
+    height: 35px;
+    border: 1px solid gray;
+    padding: 6px 12px;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 4px;
   }
   
 }
