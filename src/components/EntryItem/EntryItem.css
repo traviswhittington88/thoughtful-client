@@ -26,14 +26,15 @@
 
 .EntryItem {
   padding: 5px;
+  margin: 10px;
   background: rgba(0,0,0,0.9);
   background-image: url(blur.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   color: #fff;
-  border-bottom: #333 solid 5px;
-    padding: 1.2rem 1rem;
+  border-radius: 4px;
+  padding: 1.2rem 1rem;
 }
 
 /*.EntryItem:nth-child(even) {

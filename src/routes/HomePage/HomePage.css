@@ -24,7 +24,7 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-
+  color: #fff;
 }
 
 .split {
@@ -33,22 +33,12 @@
 }
 
 .left {
-
- /* background-image: url(plank.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center; */
-  color: #fff; 
   width: 35%;
 }
 
 .right {
   width: 65%;
- /* background-image: url(plank.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center; */
-  color: #fff;
+
 }
 
 @media screen and (min-width: 320px) {
