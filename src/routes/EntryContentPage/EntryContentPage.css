@@ -16,36 +16,34 @@
   align-content: center;
   padding-top: 20px;
   margin: 0 auto;  /*don't think these last 2 are necessary but need to ask */
-  text-align: center;
-  width: 100%;
+  text-align: center;  
+}
+
+.alt-left {
+  width: 15%;
+  background-image: url(plank.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-right: 1px solid white;
+}
+
+.alt-right {
+  width: 85%;
   background-image: url(showcase.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  
 }
 
-.alt-left {
-  background-color: #eee;
-  width: 15%;
-}
-
-.alt-right {
-  background-color: #ddd;
-  width: 85%;
-}
-
-@media screen and (min-width: 500px)
 
 @media screen and (min-width: 768px) {
 
   .alt-left {
-    background-color: #eee;
     width: 10%;
   }
   
   .alt-right {
-    background-color: #ddd;
     width: 90%;
   }
 
