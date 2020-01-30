@@ -10,8 +10,8 @@ As a first time user you can create a thoughtful account by inputting your usern
 
 e.g.
 
-username - theBugs52
-password - looneytoons53$$  (must be at least 8 characters with 1 uppercase, lowercase, number & special character)
+* username - theBugs52
+* password - looneytoons53$$  (must be at least 8 characters with 1 uppercase, lowercase, number & special character)
 full_name - Bugs Bunny
 pseudonym - Bugs -- Pseudonyms are listed on journal entries as a way to have fun with your anonymity!
 
