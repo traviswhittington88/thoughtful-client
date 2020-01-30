@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link, BrowserRouter } from 'react-router-dom'
 //import PropTypes from 'prop-types'
 import EntryContext from '../../contexts/EntryContext'
 import './EntryItem.css'
@@ -18,11 +18,13 @@ export default function EntryItem(props) {
             <div className="entry">
               <header className="entry-header">
                 <h2 className="entry-heading">
-                  <Link 
-                    to={`/entry/${props.id}`}
-                  >
-                    {props.title}
-                  </Link>
+                  <BrowserRouter>
+                    <Link 
+                      to={`/entry/${props.id}`}
+                    >
+                      {props.title}
+                    </Link>
+                  </BrowserRouter>
                 </h2>
                 <p>from</p>
                 <h3 className="entry-subheading">{props.journal_name}</h3>

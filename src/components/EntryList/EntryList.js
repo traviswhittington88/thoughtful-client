@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, BrowserRouter } from 'react-router-dom'
 import './EntryList.css'
 import EntryItem from '../EntryItem/EntryItem';
 import EntryContext from '../../contexts/EntryContext'
@@ -21,6 +21,7 @@ export default class EntryList extends Component {
     console.log(dummyEntries)
     return (
       <>
+      <BrowserRouter>
         <section className="EntryList">
           <header className="entry-header">
             <h2 className="entry-main-heading">Your Entries</h2>
@@ -43,6 +44,7 @@ export default class EntryList extends Component {
             </button>
           </ul>
         </section>
+        </BrowserRouter>
       </>
     )
   }

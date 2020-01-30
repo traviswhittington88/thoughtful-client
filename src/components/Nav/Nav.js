@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, BrowserRouter } from 'react-router-dom'
 import TokenService from '../../services/token-service'
 import './Nav.css'
 import logo from '../../images/logo_black.png'
@@ -12,19 +12,22 @@ export default class Nav extends Component {
 
   renderLogoutLink() {
     return (
-      <div className='item logout'>
-        <Link
-          onClick={this.handleLogoutClick}
-          to='/'>
-          Logout
-        </Link>
-      </div>
+      <BrowserRouter>
+        <div className='item logout'>
+          <Link
+            onClick={this.handleLogoutClick}
+            to='/'>
+            Logout
+          </Link>
+        </div>
+      </BrowserRouter>
     )
   }
 
   renderLoginLink() {
     return (
       <>
+      <BrowserRouter>
         <div className='item signup'>
           <Link
             to='/signup'>
@@ -37,12 +40,14 @@ export default class Nav extends Component {
             Login
           </Link>
         </div>
+      </BrowserRouter>
       </>
     )
   }
 
   render() {
       return (
+        <BrowserRouter>  
         <nav role="navigation" className="nav bg-light">
           <div className="item name">
             <Link
@@ -55,8 +60,8 @@ export default class Nav extends Component {
           {TokenService.hasAuthToken()
             ? this.renderLogoutLink()
             : this.renderLoginLink()}
-          
         </nav>
+        </BrowserRouter>
       )
   }
 }

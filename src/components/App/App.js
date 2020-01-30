@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Route, Switch } from 'react-router-dom'
+import { Route, Switch, BrowserRouter } from 'react-router-dom'
 import PrivateRoute from '../Utils/PrivateRoute'
 import PublicOnlyRoute from '../Utils/PublicOnlyRoute'
 import './App.css'
@@ -215,57 +215,59 @@ export default class App extends Component {
     }
 
     return (
+      <BrowserRouter>
       <div className='App'>
         <header className='App__header'></header>
         <main className='App__main'>
           {this.state.hasError && <p className='errorText'>Sorry there was an error! Try again!</p>}
           <EntryContext.Provider value={contextValue}>
-          <Switch>
-            <Route
-              exact
-              path='/'
-              component={LandingPage}
-            />
-            <PrivateRoute
-              exact
-              path='/homepage'
-              component={HomePage}
-            />
-            <PublicOnlyRoute
-              path='/signup'
-              component={SignupPage}
-            />
-            <PublicOnlyRoute
-              path='/login'
-              component={LoginPage}
-            />
-            <PrivateRoute
-              path="/entry/:entryid"
-              component={EntryContentPage}
-            />
-            <PrivateRoute
-              path="/addentry"
-              component={AddEntryPage}
-            />
-            <PrivateRoute
-              path="/editentry/:entryid"
-              component={EditEntryPage}
-            />
-            <PrivateRoute
-              path="/addjournal"
-              component={AddJournalPage}
-            />
-            <PrivateRoute
-              path="/editjournal/:journalid"
-              component={EditJournalPage}
-            />
-            <Route
-              component={NotFoundPage}
-            />
-          </Switch>
+              <Switch>
+                <Route
+                  exact
+                  path='/'
+                  component={LandingPage}
+                />
+                <PrivateRoute
+                  exact
+                  path='/homepage'
+                  component={HomePage}
+                />
+                <PublicOnlyRoute
+                  path='/signup'
+                  component={SignupPage}
+                />
+                <PublicOnlyRoute
+                  path='/login'
+                  component={LoginPage}
+                />
+                <PrivateRoute
+                  path="/entry/:entryid"
+                  component={EntryContentPage}
+                />
+                <PrivateRoute
+                  path="/addentry"
+                  component={AddEntryPage}
+                />
+                <PrivateRoute
+                  path="/editentry/:entryid"
+                  component={EditEntryPage}
+                />
+                <PrivateRoute
+                  path="/addjournal"
+                  component={AddJournalPage}
+                />
+                <PrivateRoute
+                  path="/editjournal/:journalid"
+                  component={EditJournalPage}
+                />
+                <Route
+                  component={NotFoundPage}
+                />
+              </Switch>
           </EntryContext.Provider>
         </main>
       </div>
+      </BrowserRouter>
     );
   }
 }

@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, BrowserRouter } from 'react-router-dom'
 import EntryContext from '../../contexts/EntryContext'
 import './HomePage.css'
 import Nav from '../../components/Nav/Nav'
@@ -13,6 +13,7 @@ export default class HomePage extends Component {
     render() {
         return (
           <>
+          <BrowserRouter>
             <Nav />
               <main role="main">
                 <div className="homepage">
@@ -35,6 +36,7 @@ export default class HomePage extends Component {
                 </div>   
               </main>
             <Footer />
+            </BrowserRouter>
           </>
         )
     }
