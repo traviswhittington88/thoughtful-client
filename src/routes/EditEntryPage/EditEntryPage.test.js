@@ -6,7 +6,7 @@ import EditEntryPage from './EditEntryPage';
 it('renders without crashing', () => {
   const div = document.createElement('div');
 
-  ReactDOM.render(<Router><EditEntryPage /></Router>, div);
+  ReactDOM.render(<Router><EditEntryPage match={ {params: { entryid: 2  }}} /></Router>, div);
 
   ReactDOM.unmountComponentAtNode(div);
 });

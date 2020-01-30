@@ -6,7 +6,7 @@ import EntryContentPage from './EntryContentPage';
 it('renders without crashing', () => {
   const div = document.createElement('div');
 
-  ReactDOM.render(<Router><EntryContentPage /></Router>, div);
+  ReactDOM.render(<Router><EntryContentPage match={ {params: { entryid: 2  }}}/></Router>, div);
 
   ReactDOM.unmountComponentAtNode(div);
 });
