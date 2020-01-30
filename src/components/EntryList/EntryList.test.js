@@ -1,11 +1,12 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
+import { BrowserRouter as Router } from 'react-router-dom'
 import EntryList from './EntryList';
 
 it('renders without crashing', () => {
   const div = document.createElement('div');
 
-  ReactDOM.render(<EntryList />, div);
+  ReactDOM.render(<Router><EntryList /></Router>, div);
 
   ReactDOM.unmountComponentAtNode(div);
 });

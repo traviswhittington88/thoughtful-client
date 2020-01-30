@@ -1,11 +1,12 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
+import { BrowserRouter as Router } from 'react-router-dom'
 import EntryItem from './EntryItem';
 
 it('renders without crashing', () => {
   const div = document.createElement('div');
 
-  ReactDOM.render(<EntryItem />, div);
+  ReactDOM.render(<Router><EntryItem /></Router>, div);
 
   ReactDOM.unmountComponentAtNode(div);
 });
