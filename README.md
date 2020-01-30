@@ -1,69 +1,68 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Thoughtful 
 
-## Available Scripts
+An anonymous user friendly journaling app that performs basic CRUD operations by creating, reading, updating and deleting journal entries. 
 
-In the project directory, you can run:
 
-### `npm start`
+![](src/images/thoughtfulLanding.jpg)
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+## Startup
 
-### `npm test`
+* Clone the project to an empty folder and initialize
+* `npm t`  (basic smokescreen tests for component rendering)
+* `npm start` (starts the application on port 3000)
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Production build
 
-### `npm run build`
+To create a production build use the `npm run build` command
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+## Registration
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+If you want to skip the registration process see the logging in section for default credentials.
 
-### `npm run eject`
+As a first time user you can create a thoughtful account by inputting your username, password, pseudonym & fullname 
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+e.g.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+* username - theBugs52
+* password - looneytoons53$$  (must be at least 8 characters with 1 uppercase, lowercase, number & special character)
+* full_name - Bugs Bunny
+* pseudonym - Bugs (Pseudonyms are listed on journal entries as a way to have fun with your anonymity!)
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## Logging In
 
-## Learn More
+Once you've registered you will be automatically redirected to the login page where you can enter your recently created credentials
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Default Credentials
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+* `defaultUser` 
+* `AAaa11$$`
 
-### Code Splitting
+## Accessing Entries
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+All current journals and entries will be automatically loaded to the page. To view an entires contents click the entry header, aka the title of the entry.
 
-### Analyzing the Bundle Size
+This will direct you to the entry content page where you see the full entry and the owning journal on the left most sidebar
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+## Editing Entries
 
-### Making a Progressive Web App
+Clicking the edit button on the entry content page will redirect you to the edit entry route. Here you can change the title,
+content, and/or pen name. Clicking submit will take you back to the entry content page where you will see the most up to date entry!
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+## Deleting Entries
 
-### Advanced Configuration
+Clicking the delete button from both the entry content page and the main entries list page will remove an entry from the database.. be careful where you click!!
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
+## Viewing entries by journal
 
-### Deployment
+You can browse which entries belong to which journal by clicking on the journal icons in the sidebar on the left. You can also add new entries from this view as well. Once you add an entry from this view, you will be redirected to the previous screen. 
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
+## Adding Journals
 
-### `npm run build` fails to minify
+You can also add journals by simply clicking the new journal button on the sidebar in the homepage.  This will direct you to the add journal page where you enter a title for your journal and click submit. Easy as that!
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
-# thoughtful-client
+
+
+
