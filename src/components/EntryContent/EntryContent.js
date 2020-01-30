@@ -15,7 +15,6 @@ export default function EntryContent(props) {
       <EntryContext.Consumer>
         {(value) => {
           return (
-            <BrowserRouter>
             <div className="EntryContentBlock">
               <header className="EntryInfo">
                 <h2>{props.title}</h2>
@@ -58,7 +57,6 @@ export default function EntryContent(props) {
                 </div>
               </section>
             </div>
-            </BrowserRouter>
           )
         }}
       </EntryContext.Consumer>

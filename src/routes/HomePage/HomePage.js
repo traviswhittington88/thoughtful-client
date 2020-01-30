@@ -13,7 +13,6 @@ export default class HomePage extends Component {
     render() {
         return (
           <>
-          <BrowserRouter>
             <Nav />
               <main role="main">
                 <div className="homepage">
@@ -36,7 +35,6 @@ export default class HomePage extends Component {
                 </div>   
               </main>
             <Footer />
-            </BrowserRouter>
           </>
         )
     }

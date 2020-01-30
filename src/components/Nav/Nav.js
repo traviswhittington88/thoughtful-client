@@ -12,7 +12,6 @@ export default class Nav extends Component {
 
   renderLogoutLink() {
     return (
-      <BrowserRouter>
         <div className='item logout'>
           <Link
             onClick={this.handleLogoutClick}
@@ -20,14 +19,12 @@ export default class Nav extends Component {
             Logout
           </Link>
         </div>
-      </BrowserRouter>
     )
   }
 
   renderLoginLink() {
     return (
       <>
-      <BrowserRouter>
         <div className='item signup'>
           <Link
             to='/signup'>
@@ -40,14 +37,12 @@ export default class Nav extends Component {
             Login
           </Link>
         </div>
-      </BrowserRouter>
       </>
     )
   }
 
   render() {
       return (
-        <BrowserRouter>  
         <nav role="navigation" className="nav bg-light">
           <div className="item name">
             <Link
@@ -55,13 +50,12 @@ export default class Nav extends Component {
               className="title"
             >
               <img src={logo}></img>
-            </Link>
+            </Link> 
           </div>
           {TokenService.hasAuthToken()
             ? this.renderLogoutLink()
             : this.renderLoginLink()}
         </nav>
-        </BrowserRouter>
       )
   }
 }

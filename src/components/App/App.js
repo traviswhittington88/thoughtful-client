@@ -215,7 +215,6 @@ export default class App extends Component {
     }
 
     return (
-      <BrowserRouter>
       <div className='App'>
         <header className='App__header'></header>
         <main className='App__main'>
@@ -267,7 +266,6 @@ export default class App extends Component {
           </EntryContext.Provider>
         </main>
       </div>
-      </BrowserRouter>
     );
   }
 }
