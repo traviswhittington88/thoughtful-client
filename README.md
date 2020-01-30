@@ -1,10 +1,16 @@
-# Thoughtful (Written in React)
+# Thoughtful 
 
 An anonymous user friendly journaling app that performs basic CRUD operations by creating, reading, updating and deleting journal entries. 
 
 
 ![](src/images/thoughtfulLanding.jpg)
 
+
+## Tech Stack
+
+* React
+* Node/Express
+* Postgres
 
 ## Startup
 
