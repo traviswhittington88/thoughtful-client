@@ -6,8 +6,8 @@ An anonymous user friendly journaling app that performs basic CRUD operations by
 ## Startup
 
 * Clone the project to an empty folder and initialize
-* npm t  (basic smokescreen tests for component rendering)
-* npm start (starts the application on port 3000)
+* `npm t`  (basic smokescreen tests for component rendering)
+* `npm start` (starts the application on port 3000)
 
 ## Production build
 
@@ -34,8 +34,8 @@ Once you've registered you will be automatically redirected to the login page wh
 
 ### Default Credentials
 
-* defaultUser 
-* AAaa11$$
+* `defaultUser` 
+* `AAaa11$$`
 
 ## Accessing Entries
 
