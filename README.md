@@ -1,4 +1,4 @@
-# Thoughtful 
+# Thoughtful (Written in React)
 
 An anonymous user friendly journaling app that performs basic CRUD operations by creating, reading, updating and deleting journal entries. 
 
