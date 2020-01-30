@@ -12,20 +12,20 @@ e.g.
 
 * username - theBugs52
 * password - looneytoons53$$  (must be at least 8 characters with 1 uppercase, lowercase, number & special character)
-full_name - Bugs Bunny
-pseudonym - Bugs -- Pseudonyms are listed on journal entries as a way to have fun with your anonymity!
+* full_name - Bugs Bunny
+* pseudonym - Bugs (Pseudonyms are listed on journal entries as a way to have fun with your anonymity!)
 
 
 ## Logging In
 
 Once you've registered you will be automatically redirected to the login page where you can enter your recently created credentials
 
-If you would rather use default credentials then type 
+### Default Credentials
 
-defaultUser for the username &
-AAaa11$$ for the password
+* defaultUser 
+* AAaa11$$
 
-#Accessing Entries
+## Accessing Entries
 
 All current journals and entries will be automatically loaded to the page. To view an entires contents click the entry header, aka the title of the entry.
 
