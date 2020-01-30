@@ -16,7 +16,8 @@
   align-content: center;
   padding-top: 20px;
   margin: 0 auto;  /*don't think these last 2 are necessary but need to ask */
-  text-align: center;  
+  text-align: center; 
+  height: 100%; 
 }
 
 .alt-left {
