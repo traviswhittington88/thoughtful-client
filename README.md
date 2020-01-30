@@ -3,7 +3,7 @@
 An anonymous user friendly journaling app that performs basic CRUD operations by creating, reading, updating and deleting journal entries. 
 
 
-![](src/images/background-small.jpg)
+![](src/images/showcase.jpg)
 
 
 ## Startup
