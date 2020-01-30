@@ -1,3 +1,8 @@
+## Thoughtful 
+
+An anonymous user friendly journaling app that performs basic CRUD operations via create, reading, updating and deleting journal entries.  
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
