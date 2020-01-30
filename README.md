@@ -6,6 +6,12 @@ An anonymous user friendly journaling app that performs basic CRUD operations by
 ![](src/images/thoughtfulLanding.jpg)
 
 
+## Tech Stack
+
+* React
+* Node/Express
+* Postgres
+
 ## Startup
 
 * Clone the project to an empty folder and initialize
@@ -18,6 +24,8 @@ To create a production build use the `npm run build` command
 
 
 ## Registration
+
+![](src/images/signup.png)
 
 If you want to skip the registration process see the logging in section for default credentials.
 
@@ -33,6 +41,8 @@ e.g.
 
 ## Logging In
 
+![](src/images/login.png)
+
 Once you've registered you will be automatically redirected to the login page where you can enter your recently created credentials
 
 ### Default Credentials
@@ -42,11 +52,15 @@ Once you've registered you will be automatically redirected to the login page wh
 
 ## Accessing Entries
 
+![](src/images/homepage.png)
+
 All current journals and entries will be automatically loaded to the page. To view an entires contents click the entry header, aka the title of the entry.
 
 This will direct you to the entry content page where you see the full entry and the owning journal on the left most sidebar
 
 ## Editing Entries
+
+![](src/images/edit.png)
 
 Clicking the edit button on the entry content page will redirect you to the edit entry route. Here you can change the title,
 content, and/or pen name. Clicking submit will take you back to the entry content page where you will see the most up to date entry!
