@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Link, BrowserRouter } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 //import JournalContext from '../../contexts/JournalContext'
 import EntryContext from '../../contexts/EntryContext'
 import JournalItem from '../JournalItem/JournalItem'
@@ -14,7 +14,6 @@ export default class JournalSidebar extends Component {
     const { dummyJournals } = this.context
     return (
       <>
-        <BrowserRouter>
           <div className="journal_container">
             <header className="journalbar-header">
               <h2 className="journal-heading">Journals</h2>
@@ -34,14 +33,7 @@ export default class JournalSidebar extends Component {
                 New Journal
               </Link>
              </button> 
-            {/*<Link
-                to="/addjournal"
-              >
-                <FontAwesomeIcon icon={faPlusCircle} size="3x" className="plus"/>
-              </Link>
-            */}
           </div>
-        </BrowserRouter>
       </>
     )
   }
