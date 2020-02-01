@@ -112,8 +112,6 @@ export default class App extends Component {
     }
 
     fetch(`${config.API_ENDPOINT}api/entries/${id}`,obj)
-      .then(updatedEntry => console.log(updatedEntry))
-
   }
 
   deleteEntry = entryId => {
@@ -152,7 +150,6 @@ export default class App extends Component {
       this.setState({ dummyJournals: tempJournals, journals: tempJournals })
     })
     .catch(error => this.setState({ error: error.message }))
-    console.log(this.state.dummyJournals)
   }
 
   filterEntriesByJournal = journal_id => {

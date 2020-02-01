@@ -20,8 +20,6 @@ export default class SignupForm extends Component {
       password: password.value, 
     }
 
-    console.log(newUser)
-
     this.setState({ error: null })
 
     AuthApiService.postUser(newUser)

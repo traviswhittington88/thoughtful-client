@@ -18,7 +18,6 @@ export default class EntryList extends Component {
   
   render() {
     const  { dummyEntries, dummyJournals } = this.context
-    console.log(dummyEntries)
     return (
       <>
         <section className="EntryList">

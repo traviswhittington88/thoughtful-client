@@ -14,9 +14,6 @@ export default class LoginPage extends Component {
 
   handleLoginSuccess = () => {
     const { location, history } = this.props
-    /*console.log(this.props.location)
-    const { destination } = (location.state || {}).from || '/' 
-    history.push(destination) */
     history.push('/homepage')
   }
 
