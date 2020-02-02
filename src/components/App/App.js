@@ -132,13 +132,11 @@ export default class App extends Component {
       }
       this.setState({ hasError: false })
     })
-    .catch(error => {
-      this.setEntries()
-      this.setState({ error: error.message, hasError: true })
-    }) 
+    .catch(error => this.setState({ error: error.message, hasError: true })) 
    
+    this.setEntries()
     const tempEntries = this.state.entries.filter(entry => entry.id !== entryId)
-    this.setState({ dummyEntries: tempEntries, entries: tempEntries })
+    this.setState({ dummyEntries: tempEntries, entries: tempEntries })*/
   }
 
   addJournal = (journal_name) => {
