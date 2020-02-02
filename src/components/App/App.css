@@ -28,6 +28,10 @@ button:active {
   border-color: white;
 }
 
+.errorText {
+  padding: 10px;
+}
+
 @media screen and (min-width: 500px) {
 
   body {

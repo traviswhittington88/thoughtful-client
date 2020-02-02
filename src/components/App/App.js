@@ -26,7 +26,8 @@ export default class App extends Component {
       dummyEntries: [],
       journals: [],
       dummyJournals: [],
-      hasError: false
+      hasError: false,
+      error: { message: null }
     }
   }
  
@@ -115,13 +116,23 @@ export default class App extends Component {
   }
 
   deleteEntry = entryId => {
+    const user_id = TokenService.getUserId()
     fetch(`${config.API_ENDPOINT}api/entries/${entryId}`, {
       method: 'DELETE',
       headers: {
         'content-type': 'application/json',
         'authorization': `bearer ${TokenService.getAuthToken()}`,
+        'user_id': user_id
       }
     })
+    .then(res => {
+      if(!res.ok) {
+        throw new Error(res.statusText)
+      }
+      this.setState({ hasError: false })
+    })
+    .catch(error => this.setState({ error: error.message, hasError: true })) 
+   
     const tempEntries = this.state.entries.filter(entry => entry.id !== entryId)
     this.setState({ dummyEntries: tempEntries, entries: tempEntries })
   }
@@ -194,6 +205,8 @@ export default class App extends Component {
         this.setState({ entries: entries, dummyEntries: entries })
       })
       .catch(err => {this.setState({ error: err.message })})
+
+      
   }
 
 
@@ -215,7 +228,7 @@ export default class App extends Component {
       <div className='App'>
         <header className='App__header'></header>
         <main className='App__main'>
-          {this.state.hasError && <p className='errorText'>Sorry there was an error! Try again!</p>}
+          {this.state.hasError && <p className='errorText'>{this.state.err}</p>}
           <EntryContext.Provider value={contextValue}>
               <Switch>
                 <Route
