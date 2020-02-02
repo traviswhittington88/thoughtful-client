@@ -1,5 +1,4 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
 import './JournalItem.css'
 import EntryContext from '../../contexts/EntryContext'
 

@@ -7,9 +7,6 @@ import EntryContext from '../../contexts/EntryContext'
 import './EntryContentPage.css'
 
 export default class EntryContentPage extends Component {
-  constructor(props) {
-    super(props)
-  }
 
   static contextType = EntryContext
 

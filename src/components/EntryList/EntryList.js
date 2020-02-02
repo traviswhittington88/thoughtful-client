@@ -1,9 +1,8 @@
 import React, { Component } from 'react'
-import { Link, BrowserRouter } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import './EntryList.css'
 import EntryItem from '../EntryItem/EntryItem';
 import EntryContext from '../../contexts/EntryContext'
-import { getJournalName } from '../../helpers'
 
 export default class EntryList extends Component {
 

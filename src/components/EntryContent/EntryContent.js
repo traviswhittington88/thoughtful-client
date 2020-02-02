@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link, BrowserRouter } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import './EntryContent.css'
 import EntryContext from '../../contexts/EntryContext'
 import Moment from 'react-moment';
@@ -49,7 +49,6 @@ export default function EntryContent(props) {
                           props.id,
                           value.deleteEntry,
                         )
-                        {console.log(props.history)}
                         props.history.push('/homepage')
                       }}
                     >

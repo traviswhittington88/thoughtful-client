@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Link, BrowserRouter } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import TokenService from '../../services/token-service'
 import './Nav.css'
 import logo from '../../images/logo_black.png'
@@ -49,7 +49,7 @@ export default class Nav extends Component {
               to='/homepage'
               className="title"
             >
-              <img src={logo}></img>
+              <img src={logo} alt="thoughtful logo"></img>
             </Link> 
           </div>
           {TokenService.hasAuthToken()

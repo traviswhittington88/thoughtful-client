@@ -1,12 +1,8 @@
 import React, { Component } from 'react'
-import { Link } from 'react-router-dom'
 import EntryContext from '../../contexts/EntryContext'
 import './AddJournalForm.css' 
 
 export default class AddJournalForm extends Component {
-  constructor(props) {
-    super(props)
-  }
   static contextType = EntryContext
 
   handleSubmit = ev => {
