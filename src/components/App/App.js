@@ -132,11 +132,16 @@ export default class App extends Component {
       }
       this.setState({ hasError: false })
     })
-    .catch(error => this.setState({ error: error.message, hasError: true })) 
-   
-    this.setEntries()
+    .catch(error => this.setState({ error: error.message, hasError: true }))
+
+    const entryToDelete = this.state.entries.filter(entry => entry.id === entryId)
+    const entryUserId = entryToDelete.map(entry => entry.user_id)
+    const userId = entryUserId[0]
+    console.log(userId.toString(), user_id.toString())
+    if (userId.toString() === user_id.toString()) {
     const tempEntries = this.state.entries.filter(entry => entry.id !== entryId)
-    this.setState({ dummyEntries: tempEntries, entries: tempEntries }) 
+    this.setState({ dummyEntries: tempEntries, entries: tempEntries })
+    } 
   }
 
   addJournal = (journal_name) => {
@@ -149,7 +154,6 @@ export default class App extends Component {
       }
     }
 
-     
     fetch(`${config.API_ENDPOINT}api/journals`,obj)
     .then(res => {
       if(!res.ok) {
