@@ -34,17 +34,22 @@ export default class LandingPage extends Component {
                 <div>
                   <FontAwesomeIcon icon={faPencilAlt} size="3x" />
                   <h3>Create A Journal</h3>
-                  <p>A thoughtful journal is a way to begin storing your powerful ideas and sharing them with our community</p>
+                  <p>A thoughtful journal is a way to begin storing your powerful ideas and sharing them with our community.</p>
+                   <p>Simply click the 'new journal' button in the journal sidebar!</p>
                 </div>
                 <div>
                   <FontAwesomeIcon icon={faEdit} size="3x" />
                   <h3>Add Edit and Delete Your Entries</h3>
-                  <p>Have a thought, change that thought or delete it forever</p>
+                  <p>Have a thought, change that thought or delete it forever.</p>
+                  <p>You can edit or delete an entry by clicking on the it's title and hitting 'edit' or 'delete'.</p>
+                  <p>Create a new entry by clicking the new entry button!</p>
                 </div>
                 <div>
                   <FontAwesomeIcon icon={faGlasses} size="3x" />
                   <h3>Read Your Entries</h3>
                   <p>View entries from a specific journal or as a complete list.</p>
+                  <p>Click a journal and view only that journal's entries!</p>
+                  <p>Hit the 'Your Thoughts' header to view all entries at once!</p>
                 </div>
               </div>
             </section>
