@@ -36,6 +36,9 @@ main {
   padding-top: 150px;
 }
 
+.services {
+  margin-top: 70px;
+}
 
 
 .content {
@@ -66,6 +69,21 @@ main {
   margin-top: 1rem;
 }
 
+.cred-wrapper {
+  display: flex;
+}
+
+.default-login {
+  margin: 0 auto;
+  list-style-type: square;
+  list-style-position: inside;
+  font-size: 14px;
+  padding: 0;
+}
+
+.default-login .credentials {
+  text-align: left;
+}
 .Container {
   max-width: 960px;
   margin: auto;
@@ -165,5 +183,15 @@ p + p {
 
   .content {
     top: 0;
+  }
+}
+
+@media screen and (min-width: 500px) {
+  .cred-wrapper {
+    margin-top: 25px;
+  }
+
+  .default-login {
+    font-size: 16px;
   }
 }

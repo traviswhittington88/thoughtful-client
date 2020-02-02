@@ -19,9 +19,9 @@
   list-style-type: square;
   list-style-position: inside;
   font-size: 14px;
-  text-align: left;
+  text-align: center;
   padding: 0;
-  margin: 10px, 0px, 0px, 0px;
+
 }
 
 .submit {

@@ -22,11 +22,12 @@ export default class LandingPage extends Component {
                 <div className="text">
                   An anonymous place to share your thoughts
                 </div>
-                <div className="info-container">
-                <p>If you'd rather not register then use the login below!</p>
-                <p>Username - defaultUser </p>
-                <p>Password - AAaa$$11</p>
-              </div>
+                <div className="cred-wrapper">
+                  <ul className="default-login">
+                    <li className="credentials username">Username - defaultUser</li>
+                    <li className="credentials password">Password - AAaa$$11</li>
+                  </ul>
+                </div>
               </div>
             </header>
             <section className="services">
