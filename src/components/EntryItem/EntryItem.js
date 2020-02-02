@@ -4,7 +4,7 @@ import EntryContext from '../../contexts/EntryContext'
 import './EntryItem.css'
 
 function deleteEntryRequest(entryId, callBack) {
-  callBack(entryId)
+  callBack(entryId);
 }
 
 
