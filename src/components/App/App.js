@@ -71,6 +71,7 @@ export default class App extends Component {
       content,
       pseudonym,
       journal_id,
+      user_id: TokenService.getUserId(),
     }
 
     const obj = {
