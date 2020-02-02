@@ -49,6 +49,7 @@ export default function EntryContent(props) {
                           props.id,
                           value.deleteEntry,
                         )
+                        {console.log(props.history)}
                         props.history.push('/homepage')
                       }}
                     >

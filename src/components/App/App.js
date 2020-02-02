@@ -116,7 +116,7 @@ export default class App extends Component {
     fetch(`${config.API_ENDPOINT}api/entries/${id}`,obj)
   }
 
-  deleteEntry = entryId => {
+  deleteEntry = (entryId) => {
     const user_id = TokenService.getUserId()
     fetch(`${config.API_ENDPOINT}api/entries/${entryId}`, {
       method: 'DELETE',
@@ -137,10 +137,10 @@ export default class App extends Component {
     const entryToDelete = this.state.entries.filter(entry => entry.id === entryId)
     const entryUserId = entryToDelete.map(entry => entry.user_id)
     const userId = entryUserId[0]
-    console.log(userId.toString(), user_id.toString())
+
     if (userId.toString() === user_id.toString()) {
-    const tempEntries = this.state.entries.filter(entry => entry.id !== entryId)
-    this.setState({ dummyEntries: tempEntries, entries: tempEntries })
+      const tempEntries = this.state.entries.filter(entry => entry.id !== entryId)
+      this.setState({ dummyEntries: tempEntries, entries: tempEntries })
     } 
   }
 
