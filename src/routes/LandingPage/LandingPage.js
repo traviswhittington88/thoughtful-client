@@ -24,7 +24,7 @@ export default class LandingPage extends Component {
                   An anonymous place to share your thoughts
                 </div>
                 <div className="info-container">
-                <p>Use these credentials to login!</p>
+                <p>If you'd rather not register then use the login below!</p>
                 <p>Username - defaultUser </p>
                 <p>Password - AAaa$$11</p>
               </div>
