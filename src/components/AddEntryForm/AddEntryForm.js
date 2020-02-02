@@ -34,7 +34,7 @@ export default class AddEntryForm extends Component {
     const content = this.content.current.value
     const pen = this.pen.current.value
     this.context.addEntry(title, journal, content, pen)
-    this.props.history.push('/homepage')
+    this.props.history.goBack()
   }
 
   render() {
