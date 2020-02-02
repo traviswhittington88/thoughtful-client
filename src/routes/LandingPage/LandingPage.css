@@ -32,6 +32,12 @@ main {
   -webkit-filter: blur(0px);
 }
 
+.info-container {
+  padding-top: 150px;
+}
+
+
+
 .content {
   position: absolute;
   z-index: 1;

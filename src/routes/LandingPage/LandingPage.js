@@ -23,6 +23,11 @@ export default class LandingPage extends Component {
                 <div className="text">
                   An anonymous place to share your thoughts
                 </div>
+                <div className="info-container">
+                <p>Use these credentials to login!</p>
+                <p>Username - defaultUser </p>
+                <p>Password - AAaa$$11</p>
+              </div>
               </div>
             </header>
             <section className="services">
