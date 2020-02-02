@@ -98,10 +98,13 @@ export default class App extends Component {
   }
 
   editEntry = (id, title, content, pseudonym) => {
+    const user_id = TokenService.getUserId()
+
     const updatedEntry = {
       title,
       content,
-      pseudonym
+      pseudonym,
+      user_id
     }
 
     const obj = {

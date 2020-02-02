@@ -42,6 +42,7 @@ export default class EditEntryForm extends Component {
       title,
       content,
       pseudonym,
+      user_id: TokenService.getUserId()
     }
     const obj = {
       method: 'PATCH',
