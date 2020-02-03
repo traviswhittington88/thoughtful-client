@@ -42,7 +42,7 @@ export default class LandingPage extends Component {
                   <FontAwesomeIcon icon={faEdit} size="3x" />
                   <h3>Add Edit and Delete Your Entries</h3>
                   <p>Have a thought, change that thought or delete it forever.</p>
-                  <p>You can edit or delete an entry by clicking on the it's title and hitting 'edit' or 'delete'.</p>
+                  <p>You can edit or delete an entry by clicking on its title and hitting 'edit' or 'delete'.</p>
                   <p>Create a new entry by clicking the new entry button!</p>
                 </div>
                 <div>
