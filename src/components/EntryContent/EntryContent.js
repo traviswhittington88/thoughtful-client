@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import './EntryContent.css'
 import EntryContext from '../../contexts/EntryContext'
+import TokenService from '../../services/token-service'
 import Moment from 'react-moment';
 import 'moment-timezone';
 
@@ -32,7 +33,8 @@ export default function EntryContent(props) {
                     {props.content} 
                   </p>
                 </div>
-                <div className="button-box">
+                { TokenService.getUserId().toString() === props.user_id.toString() &&
+                  <div className="button-box">
                     <button
                       type="button"
                       className="editButton"
@@ -41,6 +43,7 @@ export default function EntryContent(props) {
                           Edit
                         </Link>
                     </button>
+                    
                     <button 
                       type="button"
                       className="deleteButton"
@@ -51,10 +54,11 @@ export default function EntryContent(props) {
                         )
                         props.history.push('/homepage')
                       }}
-                    >
+                    > 
                       Delete
                     </button>
-                </div>
+                  </div>
+                  }
               </section>
             </div>
           )
