@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import EntryContext from '../../contexts/EntryContext'
 import './EntryItem.css'
+import TokenService from '../../services/token-service';
 
 function deleteEntryRequest(entryId, callBack) {
   callBack(entryId);
@@ -29,6 +30,7 @@ export default function EntryItem(props) {
                 <h4>{props.pseudonym}</h4>
                 <h4>{props.date}</h4>
               </header>
+              {TokenService.getUserId().toString() === props.user_id.toString() &&
                 <button 
                   className="delete-entry-button"
                   onClick={() => {
@@ -40,6 +42,7 @@ export default function EntryItem(props) {
                 >
                   Delete
                 </button>
+              }
             </div>
           </li>
         )
