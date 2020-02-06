@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+//import { Link, withRouter } from 'react-router-dom'
 import './EntryContent.css'
 import EntryContext from '../../contexts/EntryContext'
 import TokenService from '../../services/token-service'
@@ -11,7 +11,13 @@ function deleteEntryRequest(entryId, callBack) {
   callBack(entryId)
 }
 
+
 export default function EntryContent(props) {
+
+  function nextPath(path) {
+    props.history.push(path);
+  }
+
     return (
       <EntryContext.Consumer>
         {(value) => {
@@ -38,12 +44,10 @@ export default function EntryContent(props) {
                     <button
                       type="button"
                       className="editButton"
-                      >
-                        <Link to={`/editentry/${props.id}`}>
-                          Edit
-                        </Link>
+                      onClick={() => nextPath(`/editentry/${props.id}`) }
+                    >
+                      Edit
                     </button>
-                    
                     <button 
                       type="button"
                       className="deleteButton"
