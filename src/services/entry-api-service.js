@@ -1,5 +1,5 @@
-import config from '../config'
-import TokenService from './token-service'
+import config from '../../../thoughtful-client/src/config'
+import TokenService from '../services/token-service'
 
 const EntryApiService = {
     getEntries() {
